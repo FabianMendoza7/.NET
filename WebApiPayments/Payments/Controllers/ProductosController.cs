@@ -10,7 +10,7 @@ namespace WebApiPayments.Controllers
 {
     [ApiController]
     [Route("api/productos")]
-    public class ProductosController: ControllerBase
+    public class ProductosController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
 
@@ -28,6 +28,14 @@ namespace WebApiPayments.Controllers
         [HttpPost]
         public async Task<ActionResult> Post(Producto producto)
         {
+            string nombre = producto.Nombre.Trim();
+            var existe = await _context.Productos.AnyAsync(x => x.Nombre == nombre);
+
+            if (existe)
+            {
+                return BadRequest($"Ya existe un producto con el nombre {nombre}");
+            }
+
             _context.Add(producto);
             await _context.SaveChangesAsync();
             return Ok();
@@ -36,7 +44,7 @@ namespace WebApiPayments.Controllers
         [HttpPut("{id:int}")]
         public async Task<ActionResult> Put(Producto producto, int id)
         {
-            if(producto.Id != id)
+            if (producto.Id != id)
             {
                 return BadRequest("El id del producto no coincide con el id de la URL");
             }
