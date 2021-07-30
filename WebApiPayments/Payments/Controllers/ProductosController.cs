@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Payments.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +15,12 @@ namespace WebApiPayments.Controllers
     public class ProductosController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly IMapper _mapper;
 
-        public ProductosController(ApplicationDbContext context)
+        public ProductosController(ApplicationDbContext context, IMapper mapper)
         {
             this._context = context;
+            this._mapper = mapper;
         }
 
         [HttpGet]
@@ -25,10 +29,23 @@ namespace WebApiPayments.Controllers
             return await _context.Productos.ToListAsync();
         }
 
-        [HttpPost]
-        public async Task<ActionResult> Post(Producto producto)
+        [HttpGet("{id:int}", Name ="ObtenerProducto")]
+        public async Task<ActionResult<Producto>> Get(int id)
         {
-            string nombre = producto.Nombre.Trim();
+            var producto = await _context.Productos.FirstOrDefaultAsync(x=>x.Id == id);
+
+            if(producto == null)
+            {
+                return NotFound();
+            }
+
+            return producto;
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> Post(ProductoCreacionDTO productoDTO)
+        {
+            string nombre = productoDTO.Nombre.Trim();
             var existe = await _context.Productos.AnyAsync(x => x.Nombre == nombre);
 
             if (existe)
@@ -36,19 +53,16 @@ namespace WebApiPayments.Controllers
                 return BadRequest($"Ya existe un producto con el nombre {nombre}");
             }
 
+            var producto = _mapper.Map<Producto>(productoDTO);
             _context.Add(producto);
             await _context.SaveChangesAsync();
-            return Ok();
+
+            return CreatedAtRoute("ObtenerProducto", new { id = producto.Id }, productoDTO);
         }
 
         [HttpPut("{id:int}")]
-        public async Task<ActionResult> Put(Producto producto, int id)
+        public async Task<ActionResult> Put(ProductoCreacionDTO productoDTO, int id)
         {
-            if (producto.Id != id)
-            {
-                return BadRequest("El id del producto no coincide con el id de la URL");
-            }
-
             var existe = await _context.Productos.AnyAsync(x => x.Id == id);
 
             if (!existe)
@@ -56,9 +70,12 @@ namespace WebApiPayments.Controllers
                 return NotFound();
             }
 
+            var producto = _mapper.Map<Producto>(productoDTO);
+            producto.Id = id;
+
             _context.Update(producto);
             await _context.SaveChangesAsync();
-            return Ok();
+            return NoContent();
         }
 
         [HttpDelete("{id:int}")]
@@ -73,7 +90,7 @@ namespace WebApiPayments.Controllers
 
             _context.Remove(new Producto() { Id = id });
             await _context.SaveChangesAsync();
-            return Ok();
+            return NoContent();
         }
     }
 }

@@ -37,7 +37,7 @@ namespace WebApiPayments
             {
                 opciones.Filters.Add(typeof(Excepciones));
             }).AddJsonOptions(x =>
-                x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+                x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles).AddNewtonsoftJson();
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
@@ -48,6 +48,8 @@ namespace WebApiPayments
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApiPayments", Version = "v1" });
             });
+
+            services.AddAutoMapper(typeof(Startup));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
