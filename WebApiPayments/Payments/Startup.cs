@@ -59,11 +59,11 @@ namespace WebApiPayments
 
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
-                // TODO: Sacar estas dos líneas para prod:
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApiPayments v1"));
+                app.UseDeveloperExceptionPage();                
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApiPayments v1"));
 
             app.UseHttpsRedirection();
 
