@@ -1,49 +1,41 @@
-## Table of Contents
-1. [General Info](#general-info)
-2. [Technologies](#technologies)
-3. [Installation](#installation)
-4. [Collaboration](#collaboration)
-5. [FAQs](#faqs)
-### General Info
+# WebApiPaymentsII
 ***
-Write down the general informations of your project. It is worth to always put a project status in the Readme file. This is where you can add it. 
-### Screenshot
-![Image text](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
-## Technologies
+## Contenido
+1. [Información General](#general-info)
+2. [Tecnologías](#technologies)
+3. [Instalación](#installation)
+4. [Por mejorar](#collaboration)
+
+### Información General
 ***
-A list of technologies used within the project:
-* [Technologie name](https://example.com): Version 12.3 
-* [Technologie name](https://example.com): Version 2.34
-* [Library name](https://example.com): Version 1234
+Simular una operación de pago típica en una solución de comercio electrónico. 
+
+## Tecnologías
+***
+* [Visual Studio](https://visualstudio.microsoft.com/vs/preview/vs2022/): Version 2019 (Se recomienda Visual Stdio 2022 Preview)
+* [Entity Framework Core](https://docs.microsoft.com/en-us/ef/): Version 6.0.0
+* [Sql Server Data Tools](https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-ver15): Version 17.0 (Descargue si no está instalado)
+
 ## Installation
 ***
-A little intro about the installation. 
+Siga estos pasos para instalar la aplicación. 
 ```
-$ git clone https://example.com
-$ cd ../path/to/the/file
-$ npm install
-$ npm start
+$ git clone https://github.com/FabianMendoza77/.NET.git
+$ cd WebApiPaymentsII
 ```
-Side information: To use the application in a special environment use ```lorem ipsum``` to start
-## Collaboration
+Abra la solución WebApiPaymentsII.sln en Visual Studio 2019 en adelante (preferiblemente Visual Studio 2022 Preview) y luego en Package Manager Console:
+```
+$ Add-Migration Inicial
+$ Update-Database
+```
+Puede observarse la Base de datos creada, mediante Sql Server Object Explorer.
+
+## Por mejorar
 ***
-Give instructions on how to collaborate with your project.
-> Maybe you want to write a quote in this part. 
-> It should go over several rows?
-> This is how you do it.
-## FAQs
-***
-A list of frequently asked questions
-1. **This is a question in bold**
-Answer of the first question with _italic words_. 
-2. __Second question in bold__ 
-To answer this question we use an unordered list:
-* First point
-* Second Point
-* Third point
-3. **Third question in bold**
-Answer of the third question with *italic words*.
-4. **Fourth question in bold**
-| Headline 1 in the tablehead | Headline 2 in the tablehead | Headline 3 in the tablehead |
-|:--------------|:-------------:|--------------:|
-| text-align left | text-align center | text-align right |
+Este proyecto es una simulación sencilla de una API de pagos. Sinembargo podría mejorarse de la siguiente forma:
+
+> Validación de stock, cuando se superan las existencias de productos.
+> Tener un endpoint para mostrar la factura del pedido (por id del pedido).
+> Calcular el total de la factura y mostrarlo en el endpoint anterior. Aunque se recomienda que los cálculos se hagan directamente por una capa de alto nivel, como un front-end,  por ejemplo. Estos cálculos no se deberían persistir.
+> Estructurarse en capas siguiendo los lineamientos Clean Architecture. Se tenía pensado hacer de la siguiente forma pero por cuestiones de tiempo no fue posible:
+Tuya.Pagos.API
