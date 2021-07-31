@@ -34,8 +34,8 @@ Puede observarse la Base de datos creada, mediante Sql Server Object Explorer.
 ***
 Este proyecto es una simulación sencilla de una API de pagos. Sinembargo podría mejorarse de la siguiente forma:
 
-> Validación de stock, cuando se superan las existencias de productos.
-> Tener un endpoint para mostrar la factura del pedido (por id del pedido).
-> Calcular el total de la factura y mostrarlo en el endpoint anterior. 
-> Aunque se recomienda que los cálculos se hagan directamente por una capa de alto nivel, como un front-end,  por ejemplo. Estos cálculos no se deberían persistir.
-> Estructurarse en capas siguiendo los lineamientos Clean Architecture. Se tenía pensado hacer de la siguiente forma pero por cuestiones de tiempo no fue posible:
+1. Validación de stock, cuando se superan las existencias de productos.
+2. Tener un endpoint para mostrar la factura del pedido (por id del pedido).
+3. Calcular el total de la factura y mostrarlo en el endpoint anterior. 
+   Aunque se recomienda que los cálculos se hagan directamente por una capa de alto nivel, como un front-end,  por ejemplo. Estos cálculos no se deberían persistir.
+4. Estructurarse en capas siguiendo los lineamientos Clean Architecture. Se tenía pensado hacer de la siguiente forma pero por cuestiones de tiempo no fue posible:
