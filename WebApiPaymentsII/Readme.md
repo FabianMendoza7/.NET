@@ -36,6 +36,6 @@ Este proyecto es una simulación sencilla de una API de pagos. Sinembargo podrí
 
 > Validación de stock, cuando se superan las existencias de productos.
 > Tener un endpoint para mostrar la factura del pedido (por id del pedido).
-> Calcular el total de la factura y mostrarlo en el endpoint anterior. Aunque se recomienda que los cálculos se hagan directamente por una capa de alto nivel, como un front-end,  por ejemplo. Estos cálculos no se deberían persistir.
+> Calcular el total de la factura y mostrarlo en el endpoint anterior. 
+> Aunque se recomienda que los cálculos se hagan directamente por una capa de alto nivel, como un front-end,  por ejemplo. Estos cálculos no se deberían persistir.
 > Estructurarse en capas siguiendo los lineamientos Clean Architecture. Se tenía pensado hacer de la siguiente forma pero por cuestiones de tiempo no fue posible:
-Tuya.Pagos.API
