@@ -1,8 +1,18 @@
 # WebApiPaymentsII
+API para pagos eCommerce
 ***
-## Table of Contents
-1. [General Info](#general-info)
-2. [Technologies](#technologies)
-3. [Installation](#installation)
-4. [Collaboration](#collaboration)
-5. [FAQs](#faqs)
+## Tabla de Contenido
+1. [Instalación](#instalacion)
+4. [Estructura](#estructura)
+5. [Por mejorar](#mejorar)
+
+## Installation
+***
+A little intro about the installation. 
+```
+$ git clone https://example.com
+$ cd ../path/to/the/file
+$ npm install
+$ npm start
+```
+Side information: To use the application in a special environment use ```lorem ipsum``` to st
