@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace WebApiPayments.Entidades
+namespace Payments.Entidades
 {
     public class Cliente
     {

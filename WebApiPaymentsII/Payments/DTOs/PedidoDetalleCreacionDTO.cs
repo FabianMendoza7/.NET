@@ -1,18 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using WebApiPayments.Entidades;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Payments.Entidades
+namespace Payments.DTOs
 {
-    public class PedidoDetalle
+    public class PedidoDetalleCreacionDTO
     {
-        public int PedidoId { get; set; }
         public int ProductoId { get; set; }
         public int Cantidad { get; set; }
 
         [Column(TypeName = "decimal(16,2)")]
         public decimal PrecioUnitario { get; set; }
-        public Pedido Pedido { get; set; }
-        public Producto Producto { get; set; }
     }
 }
