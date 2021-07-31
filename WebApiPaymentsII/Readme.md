@@ -41,8 +41,8 @@ Este proyecto es una simulación sencilla de una API de pagos. Sinembargo podrí
 4. Estructurarse en capas siguiendo los lineamientos de Clean Architecture. Se estaba refactorizando de esta forma, pero por cuestiones de tiempo no fue posible terminarlo:
 
 * Adaptadores
-  Tuya.Pagos.API
-  Tuya.Pagos.Repositorio
+  > Tuya.Pagos.API
+  > Tuya.Pagos.Repositorio
 * Comun
   Tuya.Pagos.Comun
 * Dominio
