@@ -1,10 +1,12 @@
-﻿using Payments.Entidades;
+﻿using Microsoft.EntityFrameworkCore;
+using Payments.Entidades;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Payments.Repositorio.Facturacion
 {
-    public class FacturacionRepository
+    public class FacturacionRepository: IFacturacionRepository
     {
         private readonly ApplicationDbContext _context;
 
@@ -12,7 +14,8 @@ namespace Payments.Repositorio.Facturacion
         {
             this._context = context;
         }
-        public async Task<Factura> FacturarPedido(Guid numeroFactura, Pedido pedido)
+
+        public async Task<Factura> CrearFactura(Guid numeroFactura, Pedido pedido)
         {
             Factura factura = new Factura()
             {
@@ -25,6 +28,11 @@ namespace Payments.Repositorio.Facturacion
             await _context.SaveChangesAsync();
 
             return factura;
+        }
+
+        public async Task<Factura> ObtenerFacturaPorPedidoId(int pedidoId)
+        {
+            return await _context.Facturas.Include(x => x.Pedido).Where(x => x.PedidoId == pedidoId).FirstOrDefaultAsync();
         }
     }
 }

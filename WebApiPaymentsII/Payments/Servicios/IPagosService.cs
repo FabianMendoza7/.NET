@@ -8,7 +8,7 @@ namespace Payments.Servicios.Pagos
 {
     public interface IPagosService
     {
-        Task<Pedido> PagarPedido(int clienteId, int pedidoId);
+        Task<Factura> PagarPedido(int clienteId, int pedidoId);
         Task<List<Cliente>> ObtenerClientes();
         Task<Cliente> ObtenerClientePorId(int id, bool incluyePedidos);
         Task<List<Cliente>> ObtenerClientePorNombre(string nombres);

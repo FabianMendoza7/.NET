@@ -11,7 +11,6 @@ namespace Payments.Entidades
 
         [Column(TypeName = "decimal(16,2)")]
         public decimal PrecioUnitario { get; set; }
-        public Pedido Pedido { get; set; }
         public Producto Producto { get; set; }
     }
 }

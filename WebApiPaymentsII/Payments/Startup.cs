@@ -10,7 +10,9 @@ using Payments.Filtros;
 using Payments.Middlewares;
 using Payments.Repositorio;
 using Payments.Repositorio.Facturacion;
+using Payments.Repositorio.Logistica;
 using Payments.Repositorio.Pagos;
+using Payments.Servicios;
 using Payments.Servicios.Facturacion;
 using Payments.Servicios.Pagos;
 using System.Text.Json.Serialization;
@@ -38,6 +40,10 @@ namespace Payments
             services.AddTransient<IFacturacionService, FacturacionService>();
 
             services.AddTransient<IFacturacionRepository, FacturacionRepository>();
+
+            services.AddTransient<ILogisticaService, LogisticaService>();
+
+            services.AddTransient<ILogisticaRepository, LogisticaRepository>();
 
             services.AddControllers(opciones =>
             {

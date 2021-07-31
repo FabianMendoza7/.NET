@@ -21,5 +21,7 @@ namespace Payments.Repositorio
         public DbSet<Producto> Productos { get; set; }
         public DbSet<Pedido> Pedidos { get; set; }
         public DbSet<PedidoDetalle> PedidosDetalle { get; set; }
+        public DbSet<Factura> Facturas { get; set; }
+        public DbSet<Envio> Envios { get; set; }
     }
 }

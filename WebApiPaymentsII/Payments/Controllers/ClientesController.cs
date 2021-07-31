@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Payments.DTOs;
 using Payments.Entidades;
 using Payments.Servicios.Pagos;
+using System;
 
 namespace Payments.Controllers
 {
@@ -57,6 +58,7 @@ namespace Payments.Controllers
         [HttpPut("{id:int}")]
         public async Task<ActionResult> Put(ClienteCreacionDTO clienteDTO, int id)
         {
+
             var cliente = await _pagosService.ActualizarCliente(clienteDTO, id);
 
             if (cliente == null)
@@ -77,7 +79,7 @@ namespace Payments.Controllers
 
             var cliente = await _pagosService.ObtenerClientePorId(id, false);
 
-            if(cliente == null)
+            if (cliente == null)
             {
                 return NotFound();
             }

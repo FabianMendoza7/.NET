@@ -64,7 +64,6 @@ C:\Me\.NET\WebApiPayments\Payments\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPat
 C:\Me\.NET\WebApiPayments\Payments\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Me\.NET\WebApiPayments\Payments\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Me\.NET\WebApiPayments\Payments\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
-C:\Me\.NET\WebApiPaymentsII\Payments\obj\Debug\net6.0\Payments.csproj.AssemblyReference.cache
 C:\Me\.NET\WebApiPaymentsII\Payments\obj\Debug\net6.0\Payments.GeneratedMSBuildEditorConfig.editorconfig
 C:\Me\.NET\WebApiPaymentsII\Payments\obj\Debug\net6.0\Payments.AssemblyInfoInputs.cache
 C:\Me\.NET\WebApiPaymentsII\Payments\obj\Debug\net6.0\Payments.AssemblyInfo.cs
@@ -130,3 +129,4 @@ C:\Me\.NET\WebApiPaymentsII\Payments\obj\Debug\net6.0\staticwebassets\Payments.S
 C:\Me\.NET\WebApiPaymentsII\Payments\obj\Debug\net6.0\scopedcss\bundle\Payments.styles.css
 C:\Me\.NET\WebApiPaymentsII\Payments\obj\Debug\net6.0\Payments.csproj.CopyComplete
 C:\Me\.NET\WebApiPaymentsII\Payments\obj\Debug\net6.0\Payments.genruntimeconfig.cache
+C:\Me\.NET\WebApiPaymentsII\Payments\obj\Debug\net6.0\Payments.csproj.AssemblyReference.cache

@@ -13,14 +13,16 @@ namespace Payments.Servicios.Pagos
     {
         private readonly IPagosRepository _pagosRepository;
         private readonly IFacturacionService _facturacionService;
+        private readonly ILogisticaService _logisticaService;
 
-        public PagosService(IPagosRepository pagosRepository, IFacturacionService facturacionService)
+        public PagosService(IPagosRepository pagosRepository, IFacturacionService facturacionService, ILogisticaService logisticaService)
         {
             this._pagosRepository = pagosRepository;
             this._facturacionService = facturacionService;
+            this._logisticaService = logisticaService;
         }
 
-        public async Task<Pedido> PagarPedido(int clienteId, int pedidoId)
+        public async Task<Factura> PagarPedido(int clienteId, int pedidoId)
         {
             var pedido = await ObtenerPedidoPorId(clienteId, pedidoId);
 
@@ -29,12 +31,18 @@ namespace Payments.Servicios.Pagos
                 return null;
             }
 
+            if (pedido.Estado == "PAGADO")
+            {
+                throw new Exception("El pedido ya se encuentra pagado.");
+            }
+
             // Facturar el pedido.
             var factura = await _facturacionService.FacturarPedido(pedido);
 
             if (factura != null)
             {
                 // Enviar el pedido (logística).
+                await _logisticaService.EnviarPedido(factura);
 
                 // Guardar el estado del pedido.
                 await _pagosRepository.ActualizarEstadoPedido(pedido, "PAGADO");
@@ -44,7 +52,7 @@ namespace Payments.Servicios.Pagos
                 throw new Exception("No pudo facturarse el pedido.");
             }
 
-            return pedido;
+            return factura;
         }
 
         public async Task<List<Cliente>> ObtenerClientes()
@@ -94,6 +102,7 @@ namespace Payments.Servicios.Pagos
 
         public async Task<Pedido> CrearPedido(int clienteId, PedidoCreacionDTO pedidoDTO)
         {
+            // TODO: Validar stock para evitar la creación del pedido por falta de existencias.
             return await _pagosRepository.CrearPedido(clienteId, pedidoDTO);
         }
 

@@ -142,7 +142,7 @@ namespace Payments.Repositorio.Pagos
 
             if (!existeCliente)
             {
-                return null;
+                throw new Exception("El cliente no existe");
             }
 
             // TODO: Validar que existan los productos del pedido.
