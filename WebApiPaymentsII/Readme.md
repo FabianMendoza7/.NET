@@ -40,12 +40,12 @@ Este proyecto es una simulación sencilla de una API de pagos. Sinembargo podrí
    Aunque se recomienda que los cálculos se hagan directamente por una capa de alto nivel, como un front-end,  por ejemplo. Estos cálculos no se deberían persistir.
 4. Estructurarse en capas siguiendo los lineamientos de Clean Architecture. Se estaba refactorizando de esta forma, pero por cuestiones de tiempo no fue posible terminarlo:
 
-a. Adaptadores
+* Adaptadores: 
   * Tuya.Pagos.API
   * Tuya.Pagos.Repositorio
-b. Comun
+* Comun:
   * Tuya.Pagos.Comun
-c. Dominio
+* Dominio:
   * Tuya.Pagos.UseCase
   * Tuya.Pagos.Dominio
 
