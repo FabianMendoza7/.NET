@@ -29,6 +29,9 @@ $ Add-Migration Inicial
 $ Update-Database
 ```
 Puede observarse la Base de datos creada, mediante Sql Server Object Explorer.
+Ejecute desde Visual Studio, se le pedirá crear un certificado local de seguridad.
+Se abrirá Swagger. El endpoint que permite realizar el pago es el POST: api/clientes/{clienteId}/pedidos/{pedidoId}
+
 
 ## Por mejorar
 ***
