@@ -39,7 +39,7 @@ Este proyecto es una simulación sencilla de una API de pagos. Sinembargo podrí
 1. Validación de stock, cuando se superan las existencias de productos.
 2. Tener un endpoint para mostrar la factura del pedido (por id del pedido).
 3. Calcular el total de la factura y mostrarlo en el endpoint anterior. 
-   Aunque se recomienda que los cálculos se hagan directamente por una capa de alto nivel, como un front-end,  por ejemplo. Estos cálculos no se deberían persistir.
+   Aunque se recomienda que los cálculos se hagan directamente por una capa de otro nivel, como un front-end,  por ejemplo. Estos cálculos no se deberían persistir.
 4. Estructurarse en capas siguiendo los lineamientos de Clean Architecture. Se estaba refactorizando de esta forma, pero por cuestiones de tiempo no fue posible terminarlo:
 
 * Adaptadores: 
