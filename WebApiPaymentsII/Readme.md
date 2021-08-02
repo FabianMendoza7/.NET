@@ -14,7 +14,6 @@ Simular una operación de pago típica en una solución de comercio electrónico
 ***
 * [Visual Studio](https://visualstudio.microsoft.com/vs/preview/vs2022/): Version 2019 (Se recomienda Visual Stdio 2022 Preview)
 * [Entity Framework Core](https://docs.microsoft.com/en-us/ef/): Version 6.0.0
-* [Sql Server Data Tools](https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-ver15): Version 17.0 (Descargue si no está instalado)
 
 ## Installation
 ***
