@@ -49,7 +49,7 @@ Este proyecto es una simulación sencilla de una API de pagos. Sinembargo podrí
   * Tuya.Pagos.Comun
 * Dominio:
   * Tuya.Pagos.UseCase
-  * Tuya.Pagos.Dominio
+  * Tuya.Pagos.Entities
 
 
 Siguiendo esta estructura:
