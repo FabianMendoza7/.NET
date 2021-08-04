@@ -14,7 +14,6 @@ Simular una operación de pago típica en una solución de comercio electrónico
 ***
 * [Visual Studio](https://visualstudio.microsoft.com/vs/preview/vs2022/): Version 2019 (Se recomienda Visual Stdio 2022 Preview)
 * [Entity Framework Core](https://docs.microsoft.com/en-us/ef/): Version 6.0.0
-* [Sql Server Data Tools](https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-ver15): Version 17.0 (Descargue si no está instalado)
 
 ## Installation
 ***
@@ -40,7 +39,7 @@ Este proyecto es una simulación sencilla de una API de pagos. Sinembargo podrí
 1. Validación de stock, cuando se superan las existencias de productos.
 2. Tener un endpoint para mostrar la factura del pedido (por id del pedido).
 3. Calcular el total de la factura y mostrarlo en el endpoint anterior. 
-   Aunque se recomienda que los cálculos se hagan directamente por una capa de alto nivel, como un front-end,  por ejemplo. Estos cálculos no se deberían persistir.
+   Aunque se recomienda que los cálculos se hagan directamente por una capa de otro nivel, como un front-end,  por ejemplo. Estos cálculos no se deberían persistir.
 4. Estructurarse en capas siguiendo los lineamientos de Clean Architecture. Se estaba refactorizando de esta forma, pero por cuestiones de tiempo no fue posible terminarlo:
 
 * Adaptadores: 
@@ -50,7 +49,7 @@ Este proyecto es una simulación sencilla de una API de pagos. Sinembargo podrí
   * Tuya.Pagos.Comun
 * Dominio:
   * Tuya.Pagos.UseCase
-  * Tuya.Pagos.Dominio
+  * Tuya.Pagos.Entities
 
 
 Siguiendo esta estructura:
