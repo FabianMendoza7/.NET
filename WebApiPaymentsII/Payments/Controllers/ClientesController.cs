@@ -6,6 +6,7 @@ using Payments.DTOs;
 using Payments.Entidades;
 using Payments.Servicios.Pagos;
 using System;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Payments.Controllers
 {
@@ -21,6 +22,7 @@ namespace Payments.Controllers
         }
 
         [HttpGet]
+        //[Authorize]
         public async Task<ActionResult<List<Cliente>>> Get()
         {
             return await _pagosService.ObtenerClientes();
