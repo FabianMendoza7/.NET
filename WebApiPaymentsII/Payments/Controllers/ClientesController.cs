@@ -22,6 +22,20 @@ namespace Payments.Controllers
         }
 
         [HttpGet]
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+
+
+
+
+
+
         //[Authorize]
         public async Task<ActionResult<List<Cliente>>> Get()
         {
