@@ -17,6 +17,7 @@ using Payments.Repositorio.Pagos;
 using Payments.Servicios;
 using Payments.Servicios.Facturacion;
 using Payments.Servicios.Pagos;
+using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using System.Text.Json.Serialization;
 
@@ -26,6 +27,9 @@ namespace Payments
     {
         public Startup(IConfiguration configuration)
         {
+            //Para eliminar el mapeo por defecto de los claims:
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear(); 
+
             Configuration = configuration;
         }
 

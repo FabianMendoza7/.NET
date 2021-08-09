@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -27,5 +28,9 @@ namespace Payments.Entidades
         public string Estado { get; set; }
         public Cliente Cliente { get; set; }
         public List<PedidoDetalle> Detalle { get; set; }
+
+        // IdentityUser Representa un usuario en el sistema.
+        public string UsuarioId { get; set; }
+        public IdentityUser Usuario { get; set; }
     }
 }

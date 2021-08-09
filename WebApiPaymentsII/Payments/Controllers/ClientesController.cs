@@ -1,17 +1,18 @@
-﻿using Microsoft.AspNetCore.JsonPatch;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Payments.DTOs;
 using Payments.Entidades;
 using Payments.Servicios.Pagos;
-using System;
-using Microsoft.AspNetCore.Authorization;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Payments.Controllers
 {
     [ApiController]
     [Route("api/clientes")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class ClientesController : ControllerBase
     {
         private readonly IPagosService _pagosService;
@@ -22,21 +23,7 @@ namespace Payments.Controllers
         }
 
         [HttpGet]
-        //
-        //
-        //
-        //
-        //
-        //
-        //
-        //
-
-
-
-
-
-
-        //[Authorize]
+        [AllowAnonymous]
         public async Task<ActionResult<List<Cliente>>> Get()
         {
             return await _pagosService.ObtenerClientes();

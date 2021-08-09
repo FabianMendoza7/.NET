@@ -1,26 +1,34 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Payments.DTOs;
 using Payments.Entidades;
 using Payments.Servicios.Facturacion;
 using Payments.Servicios.Pagos;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Payments.Controllers
 {
     [ApiController]
     [Route("api/clientes/{clienteId:int}/pedidos")]
-
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class PedidosController : ControllerBase
     {
         private readonly IPagosService _pagosService;
         private readonly IFacturacionService _facturaService;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public PedidosController(IPagosService pagosService, IFacturacionService facturaService)
+        public PedidosController(IPagosService pagosService, 
+                                 IFacturacionService facturaService, 
+                                 UserManager<IdentityUser> userManager)
         {
             this._pagosService = pagosService;
             this._facturaService = facturaService;
+            this._userManager = userManager;
         }
 
         [HttpGet]
@@ -52,10 +60,18 @@ namespace Payments.Controllers
         [HttpPost]
         public async Task<ActionResult> Post(int clienteId, PedidoCreacionDTO pedidoDTO)
         {
+            // Si quisiéramos conocer el valor de un determinado claim para usarlo (en este caso el Id del usuario).
+            // Nota: se debe eliminar el mapeo por defecto de los claims en Startup.cs.
+            //       se debe contar con una propiedad de IdentityUser en la entidad Pedido.cs.
+            //var emailClaim = HttpContext.User.Claims.Where(claim => claim.Type == "email").FirstOrDefault();
+            //var email = emailClaim.Value;
+            //var usuario = await _userManager.FindByEmailAsync(email);
+            //var usuarioId = await usuario.Id; //Esta variable la podemos asignar a la entidad a actualizar (linea 72)
+
             try
             {
                 var pedido = await _pagosService.CrearPedido(clienteId, pedidoDTO);
-
+                //pedido.UsuarioId = usuarioId;
 
                 return CreatedAtRoute("ObtenerPedido", new { clienteId = clienteId, pedidoId = pedido.Id }, pedidoDTO);
 
