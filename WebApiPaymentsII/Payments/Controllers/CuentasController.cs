@@ -40,7 +40,7 @@ namespace Payments.Controllers
 
             if (resultado.Succeeded)
             {
-                return ConstruirToken(credencialesUsuario);
+                return await ConstruirToken(credencialesUsuario);
             }
             else
             {
@@ -58,7 +58,7 @@ namespace Payments.Controllers
 
             if (resultado.Succeeded)
             {
-                return ConstruirToken(credencialesUsuario);
+                return await ConstruirToken(credencialesUsuario);
             }
             else
             {
@@ -68,7 +68,7 @@ namespace Payments.Controllers
 
         [HttpGet("RenovarToken")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public ActionResult<RespuestaAutenticacion> Renovar()
+        public async Task<ActionResult<RespuestaAutenticacion>> Renovar()
         {
             var emailClaim = HttpContext.User.Claims.Where(claim => claim.Type == "email").FirstOrDefault();
             var email = emailClaim.Value;
@@ -77,20 +77,25 @@ namespace Payments.Controllers
                 Email = email
             };
 
-            return ConstruirToken(credencialesUsuario);
+            return await ConstruirToken(credencialesUsuario);
         }
 
-        private RespuestaAutenticacion ConstruirToken(CredencialesUsuario credencialesUsuario)
+        private async Task<RespuestaAutenticacion> ConstruirToken(CredencialesUsuario credencialesUsuario)
         {
             var claims = new List<Claim>()
             {
                 new Claim("email", credencialesUsuario.Email)
             };
 
+            var usuario = await _userManager.FindByEmailAsync(credencialesUsuario.Email);
+            var claimsDB = await _userManager.GetClaimsAsync(usuario);
+
+            claims.AddRange(claimsDB);
+
             // Firmar nuestro JWT.
             var llave = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["llavejwt"]));
             var creds = new SigningCredentials(llave, SecurityAlgorithms.HmacSha256);
-            var expiracion = DateTime.UtcNow.AddMinutes(30);
+            var expiracion = DateTime.UtcNow.AddYears(1);
             var securityToken = new JwtSecurityToken(issuer: null, audience: null, claims: claims, expires: expiracion, signingCredentials: creds);
 
             return new RespuestaAutenticacion()
@@ -98,6 +103,22 @@ namespace Payments.Controllers
                 Token = new JwtSecurityTokenHandler().WriteToken(securityToken),
                 Expiration = expiracion
             };
+        }
+
+        [HttpPost("HacerAdmin")]
+        public async Task<ActionResult> HacerAdmin(EditarAdminDTO editarAdminDTO)
+        {
+            var usuario = await _userManager.FindByEmailAsync(editarAdminDTO.Email);
+            await _userManager.AddClaimAsync(usuario, new Claim("esAdmin", "1"));
+            return NoContent();
+        }
+
+        [HttpPost("RemoverAdmin")]
+        public async Task<ActionResult> RemoverAdmin(EditarAdminDTO editarAdminDTO)
+        {
+            var usuario = await _userManager.FindByEmailAsync(editarAdminDTO.Email);
+            await _userManager.RemoveClaimAsync(usuario, new Claim("esAdmin", "1"));
+            return NoContent();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Payments.Controllers
 {
     [ApiController]
     [Route("api/clientes")]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "EsAdmin")]
     public class ClientesController : ControllerBase
     {
         private readonly IPagosService _pagosService;

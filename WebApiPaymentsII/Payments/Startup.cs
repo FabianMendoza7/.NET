@@ -104,6 +104,13 @@ namespace Payments
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+
+            // Autorización basada en claims.
+            services.AddAuthorization(opciones =>
+            {
+                opciones.AddPolicy("EsAdmin", politica => politica.RequireClaim("esAdmin"));
+                //opciones.AddPolicy("esVendedor", politica => politica.RequireClaim("esVendedor"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
