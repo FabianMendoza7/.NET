@@ -1,16 +1,19 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Payments.DTOs;
+using Payments.Servicios;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Payments.Controllers
@@ -22,14 +25,66 @@ namespace Payments.Controllers
         private readonly UserManager<IdentityUser> _userManager;
         private readonly IConfiguration _configuration;
         private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly HashService _hashService;
+        private readonly IDataProtector _dataProtector;
 
         public CuentasController(UserManager<IdentityUser> userManager,
             IConfiguration configuration,
-            SignInManager<IdentityUser> signInManager)
+            SignInManager<IdentityUser> signInManager,
+            IDataProtectionProvider dataProtectionProvider,
+            HashService hashService)
         {
             this._userManager = userManager;
             this._configuration = configuration;
             this._signInManager = signInManager;
+            this._hashService = hashService;
+            this._dataProtector = dataProtectionProvider.CreateProtector("valor_unico_y_secreto");
+        }
+
+        [HttpGet("hash/{textoPlano}")]
+        public ActionResult RealizarHash(string textoPlano)
+        {
+            var resultado1 = _hashService.Hash(textoPlano);
+            var resultado2 = _hashService.Hash(textoPlano);
+            return Ok(new
+            {
+                textoPlano = textoPlano,
+                Hash1 = resultado1,
+                Hash2 = resultado2
+            });
+     
+
+        [HttpGet("encriptar")]
+        public ActionResult Encriptar()
+        {
+            var textoPlano = "Fabian Mendoza";
+            var textoCifrado = _dataProtector.Protect(textoPlano);
+            var textoDesencriptado = _dataProtector.Unprotect(textoCifrado);
+
+            return Ok(new
+            {
+                textoPlano,
+                textoCifrado,
+                textoDesencriptado
+            });
+        }
+
+
+        [HttpGet("encriptarPorTiempo")]
+        public ActionResult EncriptarPorTiempo()
+        {
+            var protectorLimitadoPorTiempo = _dataProtector.ToTimeLimitedDataProtector();
+            var textoPlano = "Fabian Mendoza";
+            var textoCifrado = protectorLimitadoPorTiempo.Protect(textoPlano, lifetime: TimeSpan.FromSeconds(5));
+            Thread.Sleep(6000); // La desencripción siguiente fallaría
+            var textoDesencriptado = protectorLimitadoPorTiempo.Unprotect(textoCifrado);
+
+            return Ok(new
+            {
+                textoPlano,
+                textoCifrado,
+                textoDesencriptado
+            });
         }
 
         [HttpPost("registrar")]

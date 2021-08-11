@@ -51,6 +51,8 @@ namespace Payments
             services.AddTransient<ILogisticaService, LogisticaService>();
 
             services.AddTransient<ILogisticaRepository, LogisticaRepository>();
+            
+            services.AddTransient<HashService>();
 
             services.AddControllers(opciones =>
             {
@@ -111,6 +113,17 @@ namespace Payments
                 opciones.AddPolicy("EsAdmin", politica => politica.RequireClaim("esAdmin"));
                 //opciones.AddPolicy("esVendedor", politica => politica.RequireClaim("esVendedor"));
             });
+
+            // Habilitando Cors: excepciones a urls que pueda consumir mi api desde un navegador
+            services.AddCors(opciones =>
+            {
+                opciones.AddDefaultPolicy(builder =>
+                {
+                    builder.WithOrigins("https://www.apirequest.io").AllowAnyMethod().AllowAnyHeader();
+                });
+            });
+
+            services.AddDataProtection();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -129,6 +142,8 @@ namespace Payments
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseAuthorization();
 
