@@ -31,7 +31,7 @@ namespace Payments.Controllers
             this._userManager = userManager;
         }
 
-        [HttpGet]
+        [HttpGet(Name = "obtenerPedidosPorCliente")]
         public async Task<ActionResult<List<Pedido>>> Get(int clienteId)
         {
             var pedidos = await _pagosService.ObtenerPedidos(clienteId);
@@ -44,7 +44,7 @@ namespace Payments.Controllers
             return Ok(pedidos);
         }
 
-        [HttpGet("{pedidoId:int}", Name = "ObtenerPedido")]
+        [HttpGet("{pedidoId:int}", Name = "obtenerPedido")]
         public async Task<ActionResult<Pedido>> GetById(int clienteId, int pedidoId)
         {
             var pedido = await _pagosService.ObtenerPedidoPorId(clienteId, pedidoId);
@@ -57,7 +57,7 @@ namespace Payments.Controllers
             return Ok(pedido);
         }
 
-        [HttpPost]
+        [HttpPost(Name = "crearPedido")]
         public async Task<ActionResult> Post(int clienteId, PedidoCreacionDTO pedidoDTO)
         {
             // Si quisiéramos conocer el valor de un determinado claim para usarlo (en este caso el Id del usuario).
@@ -73,7 +73,7 @@ namespace Payments.Controllers
                 var pedido = await _pagosService.CrearPedido(clienteId, pedidoDTO);
                 //pedido.UsuarioId = usuarioId;
 
-                return CreatedAtRoute("ObtenerPedido", new { clienteId = clienteId, pedidoId = pedido.Id }, pedidoDTO);
+                return CreatedAtRoute("obtenerPedido", new { clienteId = clienteId, pedidoId = pedido.Id }, pedidoDTO);
 
             }
             catch (Exception error)
@@ -82,7 +82,7 @@ namespace Payments.Controllers
             }
         }
 
-        [HttpPost("{pedidoId:int}")]
+        [HttpPost("{pedidoId:int}", Name = "pagarPedido")]
         public async Task<ActionResult<Factura>> Pay(int clienteId, int pedidoId)
         {
             try
@@ -104,7 +104,7 @@ namespace Payments.Controllers
             }
         }
 
-        [HttpPut("{pedidoId:int}")]
+        [HttpPut("{pedidoId:int}", Name = "actualizarPedido")]
         public async Task<ActionResult> Put(int clienteId, int pedidoId, PedidoCreacionDTO pedidoDTO)
         {
             var pedido = await _pagosService.ActualizarPedido(clienteId, pedidoId, pedidoDTO);

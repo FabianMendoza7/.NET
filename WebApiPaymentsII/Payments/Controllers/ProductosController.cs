@@ -21,13 +21,13 @@ namespace Payments.Controllers
             this._pagosService = pagosService;
         }
 
-        [HttpGet]
+        [HttpGet(Name = "obtenerProductos")]
         public async Task<ActionResult<List<Producto>>> Get()
         {
             return await _pagosService.ObtenerProductos();
         }
 
-        [HttpGet("{id:int}", Name = "ObtenerProducto")]
+        [HttpGet("{id:int}", Name = "obtenerProducto")]
         public async Task<ActionResult<Producto>> Get(int id)
         {
             var producto = await _pagosService.ObtenerProductosPorId(id);
@@ -40,7 +40,7 @@ namespace Payments.Controllers
             return producto;
         }
 
-        [HttpPost]
+        [HttpPost (Name = "crearProducto")]
         public async Task<ActionResult> Post(ProductoCreacionDTO productoDTO)
         {
             var producto = new Producto();
@@ -54,10 +54,10 @@ namespace Payments.Controllers
                 return BadRequest(error.Message);
             }
 
-            return CreatedAtRoute("ObtenerProducto", new { id = producto.Id }, productoDTO);
+            return CreatedAtRoute("obtenerProducto", new { id = producto.Id }, productoDTO);
         }
 
-        [HttpPut("{id:int}")]
+        [HttpPut("{id:int}", Name = "actualizarProducto")]
         public async Task<ActionResult> Put(ProductoCreacionDTO productoDTO, int id)
         {
             var producto = await _pagosService.ActualizarProducto(productoDTO, id);
@@ -70,7 +70,7 @@ namespace Payments.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{id:int}")]
+        [HttpDelete("{id:int}", Name = "borrarProducto")]
         public async Task<ActionResult> Delete(int id)
         {
             bool borrado = await _pagosService.BorrarProducto(id);

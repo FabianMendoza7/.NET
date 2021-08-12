@@ -22,14 +22,14 @@ namespace Payments.Controllers
             this._pagosService = pagosService;
         }
 
-        [HttpGet]
+        [HttpGet(Name = "obtenerClientes")]
         [AllowAnonymous]
         public async Task<ActionResult<List<Cliente>>> Get()
         {
             return await _pagosService.ObtenerClientes();
         }
 
-        [HttpGet("{id:int}", Name = "ObtenerCliente")]
+        [HttpGet("{id:int}", Name = "obtenerCliente")]
         public async Task<ActionResult<Cliente>> Get(int id)
         {
             var cliente = await _pagosService.ObtenerClientePorId(id, true);
@@ -42,7 +42,7 @@ namespace Payments.Controllers
             return cliente;
         }
 
-        [HttpGet("{nombres}")]
+        [HttpGet("{nombres}", Name = "obtenerClientePorNombre")]
         public async Task<ActionResult<List<Cliente>>> Get([FromRoute] string nombres)
         {
             var clientes = await _pagosService.ObtenerClientePorNombre(nombres);
@@ -50,15 +50,15 @@ namespace Payments.Controllers
             return clientes;
         }
 
-        [HttpPost]
+        [HttpPost(Name = "crearCliente")]
         public async Task<ActionResult> Post(ClienteCreacionDTO clienteDTO)
         {
             var cliente = await _pagosService.CrearCliente(clienteDTO);
 
-            return CreatedAtRoute("ObtenerCliente", new { id = cliente.Id }, clienteDTO);
+            return CreatedAtRoute("obtenerCliente", new { id = cliente.Id }, clienteDTO);
         }
 
-        [HttpPut("{id:int}")]
+        [HttpPut("{id:int}", Name = "actualizarCliente")]
         public async Task<ActionResult> Put(ClienteCreacionDTO clienteDTO, int id)
         {
 
@@ -72,7 +72,7 @@ namespace Payments.Controllers
             return NoContent();
         }
 
-        [HttpPatch("{id:int}")]
+        [HttpPatch("{id:int}", Name = "actualizarClienteParcialmente")]
         public async Task<ActionResult> Patch(int id, JsonPatchDocument<ClientePatchDTO> patchDocument)
         {
             if (patchDocument == null)
@@ -101,7 +101,7 @@ namespace Payments.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{id:int}")]
+        [HttpDelete("{id:int}", Name = "borrarCliente")]
         public async Task<ActionResult> Delete(int id)
         {
             bool borrado = await _pagosService.BorrarCliente(id);

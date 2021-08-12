@@ -123,7 +123,6 @@ C:\Me\.NET\WebApiPaymentsII\Payments\bin\Debug\net6.0\runtimes\win\lib\netcoreap
 C:\Me\.NET\WebApiPaymentsII\Payments\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Me\.NET\WebApiPaymentsII\Payments\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Me\.NET\WebApiPaymentsII\Payments\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Me\.NET\WebApiPaymentsII\Payments\obj\Debug\net6.0\Payments.csproj.AssemblyReference.cache
 C:\Me\.NET\WebApiPaymentsII\Payments\obj\Debug\net6.0\staticwebassets\Payments.StaticWebAssets.Manifest.cache
 C:\Me\.NET\WebApiPaymentsII\Payments\obj\Debug\net6.0\scopedcss\bundle\Payments.styles.css
 C:\Me\.NET\WebApiPaymentsII\Payments\obj\Debug\net6.0\Payments.csproj.CopyComplete
@@ -131,3 +130,4 @@ C:\Me\.NET\WebApiPaymentsII\Payments\obj\Debug\net6.0\Payments.dll
 C:\Me\.NET\WebApiPaymentsII\Payments\obj\Debug\net6.0\ref\Payments.dll
 C:\Me\.NET\WebApiPaymentsII\Payments\obj\Debug\net6.0\Payments.pdb
 C:\Me\.NET\WebApiPaymentsII\Payments\obj\Debug\net6.0\Payments.genruntimeconfig.cache
+C:\Me\.NET\WebApiPaymentsII\Payments\obj\Debug\net6.0\Payments.csproj.AssemblyReference.cache

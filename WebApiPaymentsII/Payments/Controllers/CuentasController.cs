@@ -52,6 +52,7 @@ namespace Payments.Controllers
                 Hash1 = resultado1,
                 Hash2 = resultado2
             });
+        }
      
 
         [HttpGet("encriptar")]
@@ -87,7 +88,7 @@ namespace Payments.Controllers
             });
         }
 
-        [HttpPost("registrar")]
+        [HttpPost("registrar", Name ="registrarUsuario")]
         public async Task<ActionResult<RespuestaAutenticacion>> Registrar(CredencialesUsuario credencialesUsuario)
         {
             var usuario = new IdentityUser { UserName = credencialesUsuario.Email, Email = credencialesUsuario.Email };
@@ -103,7 +104,7 @@ namespace Payments.Controllers
             }
         }
 
-        [HttpPost("login")]
+        [HttpPost("login", Name = "loginUsuario")]
         public async Task<ActionResult<RespuestaAutenticacion>> Login(CredencialesUsuario credencialesUsuario)
         {
             var resultado = await _signInManager.PasswordSignInAsync(credencialesUsuario.Email,
@@ -121,7 +122,7 @@ namespace Payments.Controllers
             }
         }
 
-        [HttpGet("RenovarToken")]
+        [HttpGet("RenovarToken", Name = "renovarToken")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<RespuestaAutenticacion>> Renovar()
         {
@@ -160,7 +161,7 @@ namespace Payments.Controllers
             };
         }
 
-        [HttpPost("HacerAdmin")]
+        [HttpPost("HacerAdmin", Name = "hacerAdmin")]
         public async Task<ActionResult> HacerAdmin(EditarAdminDTO editarAdminDTO)
         {
             var usuario = await _userManager.FindByEmailAsync(editarAdminDTO.Email);
@@ -168,7 +169,7 @@ namespace Payments.Controllers
             return NoContent();
         }
 
-        [HttpPost("RemoverAdmin")]
+        [HttpPost("RemoverAdmin", Name = "removerAdmin")]
         public async Task<ActionResult> RemoverAdmin(EditarAdminDTO editarAdminDTO)
         {
             var usuario = await _userManager.FindByEmailAsync(editarAdminDTO.Email);
