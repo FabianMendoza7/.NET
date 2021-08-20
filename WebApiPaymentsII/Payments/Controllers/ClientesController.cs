@@ -22,6 +22,24 @@ namespace Payments.Controllers
             this._pagosService = pagosService;
         }
 
+        //private void GenerarEnlaces(ClienteCreacionDTO clienteDTO)
+        //{
+        //    clienteDTO.Enlaces.Add(new DatoHATEOAS(
+        //        enlace: Url.Link("obtenerCliente", new { id = clienteDTO.Id }),
+        //        descripcion: "self",
+        //        metodo: "GET"));
+
+        //    clienteDTO.Enlaces.Add(new DatoHATEOAS(
+        //        enlace: Url.Link("actualizarCliente", new { id = clienteDTO.Id }),
+        //        descripcion: "cliente-actualizar",
+        //        metodo: "PUT"));
+
+        //    clienteDTO.Enlaces.Add(new DatoHATEOAS(
+        //        enlace: Url.Link("borrarCliente", new { id = clienteDTO.Id }),
+        //        descripcion: "cliente-borrar",
+        //        metodo: "DELETE"));
+        //}
+
         [HttpGet(Name = "obtenerClientes")]
         [AllowAnonymous]
         public async Task<ActionResult<List<Cliente>>> Get()
