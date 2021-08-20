@@ -148,3 +148,13 @@ C:\Me\.NET\WebApiPaymentsII\Payments.Test\obj\Debug\net6.0\Payments.Test.pdb
 C:\Me\.NET\WebApiPaymentsII\Payments.Test\obj\Debug\net6.0\Payments.Test.genruntimeconfig.cache
 C:\Me\.NET\WebApiPaymentsII\Payments.Test\bin\Debug\net6.0\Castle.Core.dll
 C:\Me\.NET\WebApiPaymentsII\Payments.Test\bin\Debug\net6.0\Moq.dll
+C:\Me\.NET\WebApiPaymentsII\Payments.Test\bin\Debug\net6.0\Microsoft.ApplicationInsights.dll
+C:\Me\.NET\WebApiPaymentsII\Payments.Test\bin\Debug\net6.0\Microsoft.ApplicationInsights.AspNetCore.dll
+C:\Me\.NET\WebApiPaymentsII\Payments.Test\bin\Debug\net6.0\Microsoft.AI.DependencyCollector.dll
+C:\Me\.NET\WebApiPaymentsII\Payments.Test\bin\Debug\net6.0\Microsoft.AI.EventCounterCollector.dll
+C:\Me\.NET\WebApiPaymentsII\Payments.Test\bin\Debug\net6.0\Microsoft.AI.PerfCounterCollector.dll
+C:\Me\.NET\WebApiPaymentsII\Payments.Test\bin\Debug\net6.0\Microsoft.AI.WindowsServer.dll
+C:\Me\.NET\WebApiPaymentsII\Payments.Test\bin\Debug\net6.0\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Me\.NET\WebApiPaymentsII\Payments.Test\bin\Debug\net6.0\Microsoft.Extensions.Logging.ApplicationInsights.dll
+C:\Me\.NET\WebApiPaymentsII\Payments.Test\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Me\.NET\WebApiPaymentsII\Payments.Test\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll

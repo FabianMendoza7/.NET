@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Devs\\.NET\\WebApiPaymentsII\\Payments\\Payments.csproj": {}
+    "C:\\Me\\.NET\\WebApiPaymentsII\\Payments\\Payments.csproj": {}
   },
   "projects": {
-    "E:\\Devs\\.NET\\WebApiPaymentsII\\Payments\\Payments.csproj": {
+    "C:\\Me\\.NET\\WebApiPaymentsII\\Payments\\Payments.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Devs\\.NET\\WebApiPaymentsII\\Payments\\Payments.csproj",
+        "projectUniqueName": "C:\\Me\\.NET\\WebApiPaymentsII\\Payments\\Payments.csproj",
         "projectName": "Payments",
-        "projectPath": "E:\\Devs\\.NET\\WebApiPaymentsII\\Payments\\Payments.csproj",
-        "packagesPath": "C:\\Users\\fmend\\.nuget\\packages\\",
-        "outputPath": "E:\\Devs\\.NET\\WebApiPaymentsII\\Payments\\obj\\publish\\win-x86\\",
+        "projectPath": "C:\\Me\\.NET\\WebApiPaymentsII\\Payments\\Payments.csproj",
+        "packagesPath": "C:\\Users\\idesi\\.nuget\\packages\\",
+        "outputPath": "C:\\Me\\.NET\\WebApiPaymentsII\\Payments\\obj\\publish\\win-x86\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\fmend\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\idesi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,6 +46,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[8.1.1, )"
+            },
+            "Microsoft.ApplicationInsights.AspNetCore": {
+              "target": "Package",
+              "version": "[2.18.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -84,15 +91,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x86",
-              "version": "[6.0.0-preview.7.21378.6, 6.0.0-preview.7.21378.6]"
+              "version": "[6.0.0-preview.6.21355.2, 6.0.0-preview.6.21355.2]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x86",
-              "version": "[6.0.0-preview.7.21377.19, 6.0.0-preview.7.21377.19]"
+              "version": "[6.0.0-preview.6.21352.12, 6.0.0-preview.6.21352.12]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x86",
-              "version": "[6.0.0-preview.7.21378.9, 6.0.0-preview.7.21378.9]"
+              "version": "[6.0.0-preview.6.21353.1, 6.0.0-preview.6.21353.1]"
             }
           ],
           "frameworkReferences": {
@@ -103,7 +110,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.6.21355.2\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

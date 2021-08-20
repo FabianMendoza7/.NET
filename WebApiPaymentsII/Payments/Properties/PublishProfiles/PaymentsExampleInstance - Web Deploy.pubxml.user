@@ -7,7 +7,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATQ4gqA9/EUeXpi8cNYR0jAAAAAACAAAAAAAQZgAAAAEAACAAAACa3p5C/GBLlDeU0AuaOk+PSnzG8RyP5VdbQ15LFwqlBgAAAAAOgAAAAAIAACAAAABpGwKJZ6k7NvirdkPwTAn5eVBUwKjqvDfSfGHxkEPy3oAAAAAxKlfjgg23VHJp8dlUL08ryiphKaxmn7seiqKVKo9QdQlnB2T+QhmbNm0b0fUxT5CdeiEhucMMvbGMMdKF8fle2vaTDOi4bjOQDvkaryx7PSdRSnYiNKJlgUDxAeXhKBoDUDMrXxH0HUWWHlj1lQEV/BMyBj3Do2CIcnuxkjishUAAAABusa4jp6fm9/GafOpc6u4gVdMgd+yf/VazSAEKaU4LniQ0u1hDsGhrWL1Q9WNxCrTj2rb98boqcmOT8eQcQX3G</EncryptedPassword>
-    <History>True|2021-08-20T11:28:46.2315312Z;</History>
+    <History>False|2021-08-20T21:44:53.5212485Z;False|2021-08-20T16:37:38.9985168-05:00;False|2021-08-20T16:36:20.2751807-05:00;False|2021-08-20T16:29:08.7111653-05:00;True|2021-08-20T06:28:46.2315312-05:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <EFMigrations Include="Payments.Repositorio.ApplicationDbContext">

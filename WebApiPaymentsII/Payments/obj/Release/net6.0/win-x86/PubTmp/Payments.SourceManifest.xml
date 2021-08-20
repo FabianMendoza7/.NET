@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
-  <IisApp path="E:\Devs\.NET\WebApiPaymentsII\Payments\obj\Release\net6.0\win-x86\PubTmp\Out\" />
-  <dbfullsql path="E:\Devs\.NET\WebApiPaymentsII\Payments\obj\Release\net6.0\win-x86\PubTmp\EFSQLScripts\Payments.Repositorio.ApplicationDbContext.sql" />
+  <IisApp path="C:\Me\.NET\WebApiPaymentsII\Payments\obj\Release\net6.0\win-x86\PubTmp\Out\" />
+  <dbfullsql path="C:\Me\.NET\WebApiPaymentsII\Payments\obj\Release\net6.0\win-x86\PubTmp\EFSQLScripts\Payments.Repositorio.ApplicationDbContext.sql" />
 </sitemanifest>
