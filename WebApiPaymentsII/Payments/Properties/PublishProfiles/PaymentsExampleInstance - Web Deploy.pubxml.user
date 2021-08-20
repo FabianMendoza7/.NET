@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATQ4gqA9/EUeXpi8cNYR0jAAAAAACAAAAAAAQZgAAAAEAACAAAACa3p5C/GBLlDeU0AuaOk+PSnzG8RyP5VdbQ15LFwqlBgAAAAAOgAAAAAIAACAAAABpGwKJZ6k7NvirdkPwTAn5eVBUwKjqvDfSfGHxkEPy3oAAAAAxKlfjgg23VHJp8dlUL08ryiphKaxmn7seiqKVKo9QdQlnB2T+QhmbNm0b0fUxT5CdeiEhucMMvbGMMdKF8fle2vaTDOi4bjOQDvkaryx7PSdRSnYiNKJlgUDxAeXhKBoDUDMrXxH0HUWWHlj1lQEV/BMyBj3Do2CIcnuxkjishUAAAABusa4jp6fm9/GafOpc6u4gVdMgd+yf/VazSAEKaU4LniQ0u1hDsGhrWL1Q9WNxCrTj2rb98boqcmOT8eQcQX3G</EncryptedPassword>
+    <History>True|2021-08-20T11:28:46.2315312Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="Payments.Repositorio.ApplicationDbContext">
+      <Value>Data Source=tcp:paymentsdbserverexample.database.windows.net,1433%3bInitial Catalog=Payments_db%3bUser Id=femo%40paymentsdbserverexample%3bPassword=aNdI+1229</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="PaymentsExampleInstance" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^E:\\Devs\\\.NET\\WebApiPaymentsII\\Payments\\obj\\Release\\net6\.0\\win-x86\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="Payments.Repositorio.ApplicationDbContext" description="" value="Data Source=tcp:paymentsdbserverexample.database.windows.net,1433;Initial Catalog=Payments_db;User Id=femo@paymentsdbserverexample;Password=aNdI+1229" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^E:\\Devs\\\.NET\\WebApiPaymentsII\\Payments\\obj\\Release\\net6\.0\\win-x86\\PubTmp\\EFSQLScripts\\Payments\.Repositorio\.ApplicationDbContext\.sql$" />
+  </parameter>
+</parameters>

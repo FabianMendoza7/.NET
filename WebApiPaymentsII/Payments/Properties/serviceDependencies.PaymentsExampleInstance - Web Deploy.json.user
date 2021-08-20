@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2021-08-20T11:14:10.7795465Z"
+    },
+    "identityapp1": {
+      "restored": true,
+      "restoreTime": "2021-08-20T10:50:00.9494524Z"
+    }
+  },
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "e5b871d5-5267-4ed1-abc7-ffbade0c672b"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "PaymentsExampleResourceGroup"
+    }
+  }
+}
