@@ -57,7 +57,7 @@ namespace PeliculasAPI.Controllers
             return new CreatedAtRouteResult("obtenerGenero", new { id = generoDTO.Id }, generoDTO);
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, [FromBody] GeneroCreacionDTO generoCreacionDTO)
         {
             var entidad = mapper.Map<Genero>(generoCreacionDTO);

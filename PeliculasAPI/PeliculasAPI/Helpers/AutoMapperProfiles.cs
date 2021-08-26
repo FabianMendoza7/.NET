@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PeliculasAPI.Helpers
 {
-    public class AutoMapperProfiles: Profile
+    public class AutoMapperProfiles : Profile
     {
         public AutoMapperProfiles()
         {
@@ -16,7 +16,7 @@ namespace PeliculasAPI.Helpers
             CreateMap<GeneroCreacionDTO, Genero>();
 
             CreateMap<Actor, ActorDTO>().ReverseMap();
-            CreateMap<ActorCreacionDTO, Actor>();
+            CreateMap<ActorCreacionDTO, Actor>().ForMember(X => X.Foto, options => options.Ignore());
         }
     }
 }

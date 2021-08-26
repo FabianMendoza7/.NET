@@ -59,3 +59,8 @@ C:\Me\.NET\PeliculasAPI\PeliculasAPI\obj\Debug\net6.0\PeliculasAPI.pdb
 C:\Me\.NET\PeliculasAPI\PeliculasAPI\obj\Debug\net6.0\PeliculasAPI.genruntimeconfig.cache
 C:\Me\.NET\PeliculasAPI\PeliculasAPI\bin\Debug\net6.0\AutoMapper.dll
 C:\Me\.NET\PeliculasAPI\PeliculasAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Me\.NET\PeliculasAPI\PeliculasAPI\bin\Debug\net6.0\Azure.Core.dll
+C:\Me\.NET\PeliculasAPI\PeliculasAPI\bin\Debug\net6.0\Azure.Storage.Blobs.dll
+C:\Me\.NET\PeliculasAPI\PeliculasAPI\bin\Debug\net6.0\Azure.Storage.Common.dll
+C:\Me\.NET\PeliculasAPI\PeliculasAPI\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Me\.NET\PeliculasAPI\PeliculasAPI\bin\Debug\net6.0\System.Memory.Data.dll
