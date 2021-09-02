@@ -152,6 +152,11 @@ C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\runtimes\win-x86\nati
 C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\CleanArch.Domain.dll
+C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\CleanArch.Infra.Data.dll
+C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\CleanArch.Infra.Data.pdb
+C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\CleanArch.Domain.pdb
+C:\Me\.NET\CleanArch\CleanArch.Mvc\obj\Debug\netcoreapp3.1\CleanArch.Mvc.csprojAssemblyReference.cache
 C:\Me\.NET\CleanArch\CleanArch.Mvc\obj\Debug\netcoreapp3.1\CleanArch.Mvc.AssemblyInfoInputs.cache
 C:\Me\.NET\CleanArch\CleanArch.Mvc\obj\Debug\netcoreapp3.1\CleanArch.Mvc.AssemblyInfo.cs
 C:\Me\.NET\CleanArch\CleanArch.Mvc\obj\Debug\netcoreapp3.1\CleanArch.Mvc.csproj.CoreCompileInputs.cache
@@ -181,4 +186,3 @@ C:\Me\.NET\CleanArch\CleanArch.Mvc\obj\Debug\netcoreapp3.1\CleanArch.Mvc.csproj.
 C:\Me\.NET\CleanArch\CleanArch.Mvc\obj\Debug\netcoreapp3.1\CleanArch.Mvc.dll
 C:\Me\.NET\CleanArch\CleanArch.Mvc\obj\Debug\netcoreapp3.1\CleanArch.Mvc.pdb
 C:\Me\.NET\CleanArch\CleanArch.Mvc\obj\Debug\netcoreapp3.1\CleanArch.Mvc.genruntimeconfig.cache
-C:\Me\.NET\CleanArch\CleanArch.Mvc\obj\Debug\netcoreapp3.1\CleanArch.Mvc.csprojAssemblyReference.cache

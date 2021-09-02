@@ -183,7 +183,7 @@
           "Microsoft.EntityFrameworkCore.Relational": "3.1.18"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll": {}
+          "lib/netstandard2.0/_._": {}
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll": {}
@@ -1518,6 +1518,31 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "CleanArch.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/CleanArch.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CleanArch.Domain.dll": {}
+        }
+      },
+      "CleanArch.Infra.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "CleanArch.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "3.1.18",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.18"
+        },
+        "compile": {
+          "bin/placeholder/CleanArch.Infra.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CleanArch.Infra.Data.dll": {}
         }
       }
     }
@@ -5649,10 +5674,21 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "CleanArch.Domain/1.0.0": {
+      "type": "project",
+      "path": "../CleanArch.Domain/CleanArch.Domain.csproj",
+      "msbuildProject": "../CleanArch.Domain/CleanArch.Domain.csproj"
+    },
+    "CleanArch.Infra.Data/1.0.0": {
+      "type": "project",
+      "path": "../CleanArch.Infra.Data/CleanArch.Infra.Data.csproj",
+      "msbuildProject": "../CleanArch.Infra.Data/CleanArch.Infra.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "CleanArch.Infra.Data >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.1.18",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.18",
       "Microsoft.AspNetCore.Identity.UI >= 3.1.18",
@@ -5690,7 +5726,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Me\\.NET\\CleanArch\\CleanArch.Infra.Data\\CleanArch.Infra.Data.csproj": {
+              "projectPath": "C:\\Me\\.NET\\CleanArch\\CleanArch.Infra.Data\\CleanArch.Infra.Data.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -5720,6 +5760,8 @@
             "version": "[3.1.18, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
             "version": "[3.1.18, )"
           }
