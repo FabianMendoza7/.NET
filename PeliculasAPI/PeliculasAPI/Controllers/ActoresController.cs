@@ -35,7 +35,13 @@ namespace PeliculasAPI.Controllers
         {
             var queryable = context.Actores.AsQueryable();
             await HttpContext.InsertarParametrosPaginacion(queryable, paginacionDTO.CantidadRegistrosPorPagina);
-            var entidades = await context.Actores.ToListAsync();
+
+            // Sin paginar:
+            //var entidades = await context.Actores.ToListAsync();
+
+            // Paginando:
+            var entidades = await queryable.Paginar(paginacionDTO).ToListAsync();
+
             return mapper.Map<List<ActorDTO>>(entidades);
         }
 
