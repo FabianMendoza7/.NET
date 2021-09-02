@@ -5667,11 +5667,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Me\\CLEAN-ARCH\\CleanArch\\CleanArch.Mvc\\CleanArch.Mvc.csproj",
+      "projectUniqueName": "C:\\Me\\.NET\\CleanArch\\CleanArch.Mvc\\CleanArch.Mvc.csproj",
       "projectName": "CleanArch.Mvc",
-      "projectPath": "C:\\Me\\CLEAN-ARCH\\CleanArch\\CleanArch.Mvc\\CleanArch.Mvc.csproj",
+      "projectPath": "C:\\Me\\.NET\\CleanArch\\CleanArch.Mvc\\CleanArch.Mvc.csproj",
       "packagesPath": "C:\\Users\\idesi\\.nuget\\packages\\",
-      "outputPath": "C:\\Me\\CLEAN-ARCH\\CleanArch\\CleanArch.Mvc\\obj\\",
+      "outputPath": "C:\\Me\\.NET\\CleanArch\\CleanArch.Mvc\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

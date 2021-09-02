@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lJAKslJnuR01OwtmA2NxNRjnpX2n7Q61YH5x77b7I7nfX145JW7UC00+kZBHK54vZmanKGzE6AQr5iAXTwbHsw==",
+  "dgSpecHash": "sojNXT1FPoXHFbcjeT+EHNh+g6CxdfCW42UqYE3EUsy31sZ1GtJTQPgFkFf0VNO0zCYHiLSxpqpufBuCJwfGEQ==",
   "success": true,
-  "projectFilePath": "C:\\Me\\CLEAN-ARCH\\CleanArch\\CleanArch.Mvc\\CleanArch.Mvc.csproj",
+  "projectFilePath": "C:\\Me\\.NET\\CleanArch\\CleanArch.Mvc\\CleanArch.Mvc.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\idesi\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.18\\microsoft.aspnetcore.cryptography.internal.3.1.18.nupkg.sha512",
     "C:\\Users\\idesi\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.18\\microsoft.aspnetcore.cryptography.keyderivation.3.1.18.nupkg.sha512",
