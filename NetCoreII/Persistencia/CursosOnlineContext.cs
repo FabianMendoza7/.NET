@@ -9,8 +9,8 @@ namespace Persistencia
         {
         }
 
-        public override void OnModelCreating(ModelBuilder modelBuilder){
-            modelBuilder.Entity<CursoInstructor>().HasKey(ci => new {ci.InstructorId, ci.CursoId});
+        protected override void OnModelCreating(ModelBuilder modelBuilder){
+            modelBuilder.Entity<CursoInstructor>().HasKey(ci => new { ci.CursoId, ci.InstructorId });
         }
 
         public DbSet<Comentario> Comentario {get; set;}

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Persistencia;
+using Dominio;
 
 namespace WebAPI.Controllers
 {
@@ -11,9 +13,16 @@ namespace WebAPI.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+        private readonly CursosOnlineContext context;
+
+        public WeatherForecastController(CursosOnlineContext context)
+        {
+            this.context = context;        
+        }
+                
         [HttpGet]
-        public IEnumerable<string> Get(){
-            
+        public IEnumerable<Curso> Get(){
+            return context.Curso.ToList();
         }
     }
 }

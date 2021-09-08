@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Me\\.NET\\NetCoreII\\Dominio\\Dominio.csproj": {}
+    "C:\\Me\\.NET\\netcoreII\\Dominio\\Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Me\\.NET\\NetCoreII\\Dominio\\Dominio.csproj": {
+    "C:\\Me\\.NET\\netcoreII\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Me\\.NET\\NetCoreII\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\Me\\.NET\\netcoreII\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "C:\\Me\\.NET\\NetCoreII\\Dominio\\Dominio.csproj",
+        "projectPath": "C:\\Me\\.NET\\netcoreII\\Dominio\\Dominio.csproj",
         "packagesPath": "C:\\Users\\idesi\\.nuget\\packages\\",
-        "outputPath": "C:\\Me\\.NET\\NetCoreII\\Dominio\\obj\\",
+        "outputPath": "C:\\Me\\.NET\\netcoreII\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
