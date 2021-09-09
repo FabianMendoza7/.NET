@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "UCp+JPtqTJE3xvtcbbS6R/BTC95JTnwHjVru2h7T0AwAW1KGj4Av5G1drUWdmpUYdoS0jgfYPYwBkrYPdCVSIg==",
+  "success": true,
+  "projectFilePath": "C:\\Me\\.NET\\CleanArch\\Clean.Arch.Infra.IoC\\Clean.Arch.Infra.IoC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\idesi\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\2.2.0\\microsoft.extensions.dependencyinjection.2.2.0.nupkg.sha512",
+    "C:\\Users\\idesi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.2.0\\microsoft.extensions.dependencyinjection.abstractions.2.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}
