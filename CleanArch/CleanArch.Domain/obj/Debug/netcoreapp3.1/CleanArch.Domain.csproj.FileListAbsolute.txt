@@ -6,4 +6,3 @@ C:\Me\.NET\CleanArch\CleanArch.Domain\obj\Debug\netcoreapp3.1\CleanArch.Domain.A
 C:\Me\.NET\CleanArch\CleanArch.Domain\obj\Debug\netcoreapp3.1\CleanArch.Domain.csproj.CoreCompileInputs.cache
 C:\Me\.NET\CleanArch\CleanArch.Domain\obj\Debug\netcoreapp3.1\CleanArch.Domain.dll
 C:\Me\.NET\CleanArch\CleanArch.Domain\obj\Debug\netcoreapp3.1\CleanArch.Domain.pdb
-C:\Me\.NET\CleanArch\CleanArch.Domain\obj\Debug\netcoreapp3.1\CleanArch.Domain.csprojAssemblyReference.cache

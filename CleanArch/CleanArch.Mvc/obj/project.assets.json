@@ -1520,6 +1520,35 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Clean.Arch.Infra.IoC/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "CleanArch.Application": "1.0.0",
+          "CleanArch.Domain": "1.0.0",
+          "CleanArch.Infra.Data": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection": "3.1.18"
+        },
+        "compile": {
+          "bin/placeholder/Clean.Arch.Infra.IoC.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Clean.Arch.Infra.IoC.dll": {}
+        }
+      },
+      "CleanArch.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "CleanArch.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CleanArch.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CleanArch.Application.dll": {}
+        }
+      },
       "CleanArch.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -5675,6 +5704,16 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Clean.Arch.Infra.IoC/1.0.0": {
+      "type": "project",
+      "path": "../Clean.Arch.Infra.IoC/Clean.Arch.Infra.IoC.csproj",
+      "msbuildProject": "../Clean.Arch.Infra.IoC/Clean.Arch.Infra.IoC.csproj"
+    },
+    "CleanArch.Application/1.0.0": {
+      "type": "project",
+      "path": "../CleanArch.Application/CleanArch.Application.csproj",
+      "msbuildProject": "../CleanArch.Application/CleanArch.Application.csproj"
+    },
     "CleanArch.Domain/1.0.0": {
       "type": "project",
       "path": "../CleanArch.Domain/CleanArch.Domain.csproj",
@@ -5688,6 +5727,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Clean.Arch.Infra.IoC >= 1.0.0",
       "CleanArch.Infra.Data >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.1.18",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.18",
@@ -5727,6 +5767,9 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
+            "C:\\Me\\.NET\\CleanArch\\Clean.Arch.Infra.IoC\\Clean.Arch.Infra.IoC.csproj": {
+              "projectPath": "C:\\Me\\.NET\\CleanArch\\Clean.Arch.Infra.IoC\\Clean.Arch.Infra.IoC.csproj"
+            },
             "C:\\Me\\.NET\\CleanArch\\CleanArch.Infra.Data\\CleanArch.Infra.Data.csproj": {
               "projectPath": "C:\\Me\\.NET\\CleanArch\\CleanArch.Infra.Data\\CleanArch.Infra.Data.csproj"
             }
