@@ -190,3 +190,4 @@ C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\Clean.Arch.Infra.IoC.
 C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\CleanArch.Application.dll
 C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\Clean.Arch.Infra.IoC.pdb
 C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\CleanArch.Application.pdb
+C:\Me\.NET\CleanArch\CleanArch.Mvc\obj\Debug\netcoreapp3.1\Razor\Views\Course\Index.cshtml.g.cs
