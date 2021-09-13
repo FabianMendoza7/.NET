@@ -1,3 +1,5 @@
+using Aplicacion.Cursos;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,11 +33,14 @@ namespace WebAPI
             services.AddDbContext<CursosOnlineContext>(opt => {
                 opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
-            services.AddControllers();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPI", Version = "v1" });
             });
+
+            services.AddMediatR(typeof(Consulta.Manejador).Assembly);
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

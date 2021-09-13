@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Me\\.NET\\netcoreII\\Dominio\\Dominio.csproj": {}
+    "C:\\Me\\.NET\\NetCoreII\\Dominio\\Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Me\\.NET\\netcoreII\\Dominio\\Dominio.csproj": {
+    "C:\\Me\\.NET\\NetCoreII\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Me\\.NET\\netcoreII\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\Me\\.NET\\NetCoreII\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "C:\\Me\\.NET\\netcoreII\\Dominio\\Dominio.csproj",
+        "projectPath": "C:\\Me\\.NET\\NetCoreII\\Dominio\\Dominio.csproj",
         "packagesPath": "C:\\Users\\idesi\\.nuget\\packages\\",
-        "outputPath": "C:\\Me\\.NET\\netcoreII\\Dominio\\obj\\",
+        "outputPath": "C:\\Me\\.NET\\NetCoreII\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -21,15 +21,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -40,8 +40,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "imports": [
             "net461",
             "net462",
@@ -57,7 +57,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.6.21355.2\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }

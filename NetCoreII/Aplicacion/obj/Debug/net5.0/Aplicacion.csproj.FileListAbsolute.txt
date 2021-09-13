@@ -1,0 +1,17 @@
+C:\Me\.NET\NetCoreII\Aplicacion\bin\Debug\net5.0\Aplicacion.deps.json
+C:\Me\.NET\NetCoreII\Aplicacion\bin\Debug\net5.0\Aplicacion.dll
+C:\Me\.NET\NetCoreII\Aplicacion\bin\Debug\net5.0\ref\Aplicacion.dll
+C:\Me\.NET\NetCoreII\Aplicacion\bin\Debug\net5.0\Aplicacion.pdb
+C:\Me\.NET\NetCoreII\Aplicacion\bin\Debug\net5.0\Dominio.dll
+C:\Me\.NET\NetCoreII\Aplicacion\bin\Debug\net5.0\Persistencia.dll
+C:\Me\.NET\NetCoreII\Aplicacion\bin\Debug\net5.0\Dominio.pdb
+C:\Me\.NET\NetCoreII\Aplicacion\bin\Debug\net5.0\Persistencia.pdb
+C:\Me\.NET\NetCoreII\Aplicacion\obj\Debug\net5.0\Aplicacion.csprojAssemblyReference.cache
+C:\Me\.NET\NetCoreII\Aplicacion\obj\Debug\net5.0\Aplicacion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Me\.NET\NetCoreII\Aplicacion\obj\Debug\net5.0\Aplicacion.AssemblyInfoInputs.cache
+C:\Me\.NET\NetCoreII\Aplicacion\obj\Debug\net5.0\Aplicacion.AssemblyInfo.cs
+C:\Me\.NET\NetCoreII\Aplicacion\obj\Debug\net5.0\Aplicacion.csproj.CoreCompileInputs.cache
+C:\Me\.NET\NetCoreII\Aplicacion\obj\Debug\net5.0\Aplicacion.csproj.CopyComplete
+C:\Me\.NET\NetCoreII\Aplicacion\obj\Debug\net5.0\Aplicacion.dll
+C:\Me\.NET\NetCoreII\Aplicacion\obj\Debug\net5.0\ref\Aplicacion.dll
+C:\Me\.NET\NetCoreII\Aplicacion\obj\Debug\net5.0\Aplicacion.pdb

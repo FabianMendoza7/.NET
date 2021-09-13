@@ -51,3 +51,5 @@ C:\Me\.NET\netcoreII\WebAPI\obj\Debug\net6.0\WebAPI.dll
 C:\Me\.NET\netcoreII\WebAPI\obj\Debug\net6.0\ref\WebAPI.dll
 C:\Me\.NET\netcoreII\WebAPI\obj\Debug\net6.0\WebAPI.pdb
 C:\Me\.NET\netcoreII\WebAPI\obj\Debug\net6.0\WebAPI.genruntimeconfig.cache
+C:\Me\.NET\NetCoreII\WebAPI\bin\Debug\net6.0\MediatR.dll
+C:\Me\.NET\NetCoreII\WebAPI\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

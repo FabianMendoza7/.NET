@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/SGTm0jSlAMc1OYClN1V42NuWdbuaS7hIYPQQrnPnUo7vcYNvbTmAIIIM+4xayyUl8C1xIuYYJ9jhvzJ2Chfhg==",
+  "dgSpecHash": "gnI25Xgg/GkiUHKvEy9XCRJjAQ7zYFhDM9U36kTrC3FYJYXl0J4oyjfhs54tZT/DrVVco2a4RfvAKFZNWNfuqA==",
   "success": true,
-  "projectFilePath": "C:\\Me\\.NET\\netcoreII\\Dominio\\Dominio.csproj",
+  "projectFilePath": "C:\\Me\\.NET\\NetCoreII\\Dominio\\Dominio.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
