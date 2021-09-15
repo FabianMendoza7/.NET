@@ -35,6 +35,9 @@ namespace PeliculasAPI.Helpers
             //     .ForMember(x => x.Ubicacion, x => x.MapFrom(y =>
             //    geometryFactory.CreatePoint(new Coordinate(y.Longitud, y.Latitud))));
 
+            CreateMap<SalaDeCine, SalaDeCineDTO>().ReverseMap();
+            CreateMap<SalaDeCineCreacionDTO, SalaDeCine>();
+
             CreateMap<Actor, ActorDTO>().ReverseMap();
             CreateMap<ActorCreacionDTO, Actor>()
                 .ForMember(x => x.Foto, options => options.Ignore());
