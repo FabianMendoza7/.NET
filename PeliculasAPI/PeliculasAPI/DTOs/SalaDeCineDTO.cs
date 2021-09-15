@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace PeliculasAPI.DTOs
 {
-    public class ActorPeliculaCreacionDTO
+    public class SalaDeCineDTO
     {
-        public int ActorId {  get; set; }
-        public string Personaje { get; set; }
+        public int Id { get; set; }
+        public string Nombre { get; set; }
     }
 }

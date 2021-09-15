@@ -284,6 +284,38 @@ namespace PeliculasAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("PeliculasAPI.Entidades.PeliculasSalasDeCine", b =>
+                {
+                    b.Property<int>("PeliculaId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SalaDeCineId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PeliculaId", "SalaDeCineId");
+
+                    b.HasIndex("SalaDeCineId");
+
+                    b.ToTable("PeliculasSalasDeCine");
+                });
+
+            modelBuilder.Entity("PeliculasAPI.Entidades.SalaDeCine", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(120)
+                        .HasColumnType("nvarchar(120)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SalasDeCine");
+                });
+
             modelBuilder.Entity("PeliculasAPI.Entidades.PeliculasActores", b =>
                 {
                     b.HasOne("PeliculasAPI.Entidades.Actor", "Actor")
@@ -322,6 +354,25 @@ namespace PeliculasAPI.Migrations
                     b.Navigation("Pelicula");
                 });
 
+            modelBuilder.Entity("PeliculasAPI.Entidades.PeliculasSalasDeCine", b =>
+                {
+                    b.HasOne("PeliculasAPI.Entidades.Pelicula", "Pelicula")
+                        .WithMany("PeliculasSalasDeCine")
+                        .HasForeignKey("PeliculaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PeliculasAPI.Entidades.SalaDeCine", "SalaDeCine")
+                        .WithMany("PeliculasSalasDeCine")
+                        .HasForeignKey("SalaDeCineId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Pelicula");
+
+                    b.Navigation("SalaDeCine");
+                });
+
             modelBuilder.Entity("PeliculasAPI.Entidades.Actor", b =>
                 {
                     b.Navigation("PeliculasActores");
@@ -337,6 +388,13 @@ namespace PeliculasAPI.Migrations
                     b.Navigation("PeliculasActores");
 
                     b.Navigation("PeliculasGeneros");
+
+                    b.Navigation("PeliculasSalasDeCine");
+                });
+
+            modelBuilder.Entity("PeliculasAPI.Entidades.SalaDeCine", b =>
+                {
+                    b.Navigation("PeliculasSalasDeCine");
                 });
 #pragma warning restore 612, 618
         }

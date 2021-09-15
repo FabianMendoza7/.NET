@@ -25,5 +25,7 @@ namespace PeliculasAPI.DTOs
         public int GeneroId { get; set; }
         public bool EnCines { get; set; }
         public bool ProximosEstrenos { get; set; }
+        public string CampoOrdenar { get; set; }
+        public bool OrdenAscendente { get; set; } = true;
     }
 }

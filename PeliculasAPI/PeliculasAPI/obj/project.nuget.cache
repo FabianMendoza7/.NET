@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uXqIer1K9/aCHJm7xiDZW6PSKUcdMFbmAIr3//ZtocAN37+0OHeaJBlCED58yWPbz860VwlCDDxgOYKOIcxfaQ==",
+  "dgSpecHash": "7iFkjAlp56jr+FlO39NNTChUZ6AElM73jd4PlMVejZPmHf1qxUkC299CaMISEvygwgH/h+qryhpnCbYcyDb6Hg==",
   "success": true,
   "projectFilePath": "C:\\Me\\.NET\\PeliculasAPI\\PeliculasAPI\\PeliculasAPI.csproj",
   "expectedPackageFiles": [
@@ -68,6 +68,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
+    "C:\\Users\\idesi\\.nuget\\packages\\system.linq.dynamic.core\\1.2.12\\system.linq.dynamic.core.1.2.12.nupkg.sha512",
     "C:\\Users\\idesi\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\idesi\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.net.nameresolution\\4.3.0\\system.net.nameresolution.4.3.0.nupkg.sha512",
