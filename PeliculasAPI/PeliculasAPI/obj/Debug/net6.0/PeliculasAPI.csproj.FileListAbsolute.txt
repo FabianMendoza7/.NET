@@ -67,4 +67,3 @@ C:\Me\.NET\PeliculasAPI\PeliculasAPI\bin\Debug\net6.0\Microsoft.AspNetCore.JsonP
 C:\Me\.NET\PeliculasAPI\PeliculasAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Me\.NET\PeliculasAPI\PeliculasAPI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 C:\Me\.NET\PeliculasAPI\PeliculasAPI\bin\Debug\net6.0\System.Linq.Dynamic.Core.dll
-C:\Me\.NET\PeliculasAPI\PeliculasAPI\obj\Debug\net6.0\PeliculasAPI.csproj.AssemblyReference.cache
