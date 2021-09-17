@@ -22,7 +22,8 @@ namespace PeliculasAPI.Controllers
             this.mapper = mapper;
         }
 
-        protected async Task<List<TDTO>> Get<TEntidad, TDTO>() where TEntidad : class
+        protected async Task<List<TDTO>> Get<TEntidad, TDTO>() where TEntida
+           : class
         {
             var entidades = await context.Set<TEntidad>().AsNoTracking().ToListAsync();
             var dtos = mapper.Map<List<TDTO>>(entidades);
