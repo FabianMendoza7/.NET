@@ -1,9 +1,13 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NetTopologySuite;
+using NetTopologySuite.Geometries;
+using PeliculasAPI.Helpers;
 using PeliculasAPI.Servicios;
 
 namespace PeliculasAPI
@@ -27,8 +31,17 @@ namespace PeliculasAPI
 
             services.AddHttpContextAccessor();
 
+            services.AddSingleton<GeometryFactory>(NtsGeometryServices.Instance.CreateGeometryFactory(srid: 4326));
+            services.AddSingleton(provider =>
+                new MapperConfiguration(Configuration =>
+                {
+                    var geometryFactory = provider.GetRequiredService<GeometryFactory>();
+                    Configuration.AddProfile(new AutoMapperProfiles(geometryFactory));
+                }).CreateMapper()
+            );
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), 
+                sqlServerOptions => sqlServerOptions.UseNetTopologySuite()));
 
             services.AddControllers().AddNewtonsoftJson();
         }
