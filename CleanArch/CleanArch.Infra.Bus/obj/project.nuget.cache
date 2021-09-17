@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "IUpBBY2uL/DoFjidsG4KJx/yJWFigYXhSP79rQdCXg3PdlfOchGyN+SOAp56QUfnSqOR2hNyNPhiTVt7auSKuQ==",
+  "success": true,
+  "projectFilePath": "C:\\Me\\.NET\\CleanArch\\CleanArch.Infra.Bus\\CleanArch.Infra.Bus.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\idesi\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
