@@ -10,19 +10,6 @@
         "runtime": {
           "lib/netstandard2.1/MediatR.dll": {}
         }
-      },
-      "CleanArch.Domain.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "MediatR": "9.0.0"
-        },
-        "compile": {
-          "bin/placeholder/CleanArch.Domain.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CleanArch.Domain.Core.dll": {}
-        }
       }
     }
   },
@@ -44,16 +31,10 @@
         "mediatr.9.0.0.nupkg.sha512",
         "mediatr.nuspec"
       ]
-    },
-    "CleanArch.Domain.Core/1.0.0": {
-      "type": "project",
-      "path": "../CleanArch.Domain.Core/CleanArch.Domain.Core.csproj",
-      "msbuildProject": "../CleanArch.Domain.Core/CleanArch.Domain.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "CleanArch.Domain.Core >= 1.0.0",
       "MediatR >= 9.0.0"
     ]
   },
@@ -64,11 +45,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Me\\.NET\\CleanArch\\CleanArch.Infra.Bus\\CleanArch.Infra.Bus.csproj",
-      "projectName": "CleanArch.Infra.Bus",
-      "projectPath": "C:\\Me\\.NET\\CleanArch\\CleanArch.Infra.Bus\\CleanArch.Infra.Bus.csproj",
+      "projectUniqueName": "C:\\Me\\.NET\\CleanArch\\CleanArch.Domain.Core\\CleanArch.Domain.Core.csproj",
+      "projectName": "CleanArch.Domain.Core",
+      "projectPath": "C:\\Me\\.NET\\CleanArch\\CleanArch.Domain.Core\\CleanArch.Domain.Core.csproj",
       "packagesPath": "C:\\Users\\idesi\\.nuget\\packages\\",
-      "outputPath": "C:\\Me\\.NET\\CleanArch\\CleanArch.Infra.Bus\\obj\\",
+      "outputPath": "C:\\Me\\.NET\\CleanArch\\CleanArch.Domain.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -87,11 +68,7 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {
-            "C:\\Me\\.NET\\CleanArch\\CleanArch.Domain.Core\\CleanArch.Domain.Core.csproj": {
-              "projectPath": "C:\\Me\\.NET\\CleanArch\\CleanArch.Domain.Core\\CleanArch.Domain.Core.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

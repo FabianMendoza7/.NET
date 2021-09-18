@@ -7,3 +7,6 @@ C:\Me\.NET\CleanArch\CleanArch.Infra.Bus\obj\Debug\netcoreapp3.1\CleanArch.Infra
 C:\Me\.NET\CleanArch\CleanArch.Infra.Bus\obj\Debug\netcoreapp3.1\CleanArch.Infra.Bus.csproj.CoreCompileInputs.cache
 C:\Me\.NET\CleanArch\CleanArch.Infra.Bus\obj\Debug\netcoreapp3.1\CleanArch.Infra.Bus.dll
 C:\Me\.NET\CleanArch\CleanArch.Infra.Bus\obj\Debug\netcoreapp3.1\CleanArch.Infra.Bus.pdb
+C:\Me\.NET\CleanArch\CleanArch.Infra.Bus\bin\Debug\netcoreapp3.1\CleanArch.Domain.Core.dll
+C:\Me\.NET\CleanArch\CleanArch.Infra.Bus\bin\Debug\netcoreapp3.1\CleanArch.Domain.Core.pdb
+C:\Me\.NET\CleanArch\CleanArch.Infra.Bus\obj\Debug\netcoreapp3.1\CleanArch.Infra.Bus.csproj.CopyComplete
