@@ -10,3 +10,5 @@ C:\Me\.NET\CleanArch\CleanArch.Application\obj\Debug\netcoreapp3.1\CleanArch.App
 C:\Me\.NET\CleanArch\CleanArch.Application\bin\Debug\netcoreapp3.1\CleanArch.Domain.dll
 C:\Me\.NET\CleanArch\CleanArch.Application\bin\Debug\netcoreapp3.1\CleanArch.Domain.pdb
 C:\Me\.NET\CleanArch\CleanArch.Application\obj\Debug\netcoreapp3.1\CleanArch.Application.csproj.CopyComplete
+C:\Me\.NET\CleanArch\CleanArch.Application\bin\Debug\netcoreapp3.1\CleanArch.Domain.Core.dll
+C:\Me\.NET\CleanArch\CleanArch.Application\bin\Debug\netcoreapp3.1\CleanArch.Domain.Core.pdb

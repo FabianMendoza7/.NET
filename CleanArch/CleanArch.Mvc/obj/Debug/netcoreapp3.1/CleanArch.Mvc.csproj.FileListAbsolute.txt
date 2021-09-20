@@ -186,8 +186,13 @@ C:\Me\.NET\CleanArch\CleanArch.Mvc\obj\Debug\netcoreapp3.1\CleanArch.Mvc.csproj.
 C:\Me\.NET\CleanArch\CleanArch.Mvc\obj\Debug\netcoreapp3.1\CleanArch.Mvc.dll
 C:\Me\.NET\CleanArch\CleanArch.Mvc\obj\Debug\netcoreapp3.1\CleanArch.Mvc.pdb
 C:\Me\.NET\CleanArch\CleanArch.Mvc\obj\Debug\netcoreapp3.1\CleanArch.Mvc.genruntimeconfig.cache
-C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\Clean.Arch.Infra.IoC.dll
 C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\CleanArch.Application.dll
-C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\Clean.Arch.Infra.IoC.pdb
 C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\CleanArch.Application.pdb
 C:\Me\.NET\CleanArch\CleanArch.Mvc\obj\Debug\netcoreapp3.1\Razor\Views\Course\Index.cshtml.g.cs
+C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\MediatR.dll
+C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\CleanArch.Domain.Core.dll
+C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\CleanArch.Domain.Core.pdb
+C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\CleanArch.Infra.Bus.dll
+C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\CleanArch.Infra.Bus.pdb
+C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\CleanArch.Infra.IoC.dll
+C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\CleanArch.Infra.IoC.pdb

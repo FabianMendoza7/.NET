@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "MediatR/9.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/MediatR.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/MediatR.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.18": {
         "type": "package",
         "compile": {
@@ -1520,22 +1529,6 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Clean.Arch.Infra.IoC/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "CleanArch.Application": "1.0.0",
-          "CleanArch.Domain": "1.0.0",
-          "CleanArch.Infra.Data": "1.0.0",
-          "Microsoft.Extensions.DependencyInjection": "3.1.18"
-        },
-        "compile": {
-          "bin/placeholder/Clean.Arch.Infra.IoC.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Clean.Arch.Infra.IoC.dll": {}
-        }
-      },
       "CleanArch.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -1552,11 +1545,41 @@
       "CleanArch.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "CleanArch.Domain.Core": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/CleanArch.Domain.dll": {}
         },
         "runtime": {
           "bin/placeholder/CleanArch.Domain.dll": {}
+        }
+      },
+      "CleanArch.Domain.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "MediatR": "9.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CleanArch.Domain.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CleanArch.Domain.Core.dll": {}
+        }
+      },
+      "CleanArch.Infra.Bus/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "CleanArch.Domain.Core": "1.0.0",
+          "MediatR": "9.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CleanArch.Infra.Bus.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CleanArch.Infra.Bus.dll": {}
         }
       },
       "CleanArch.Infra.Data/1.0.0": {
@@ -1573,10 +1596,45 @@
         "runtime": {
           "bin/placeholder/CleanArch.Infra.Data.dll": {}
         }
+      },
+      "CleanArch.Infra.IoC/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "CleanArch.Application": "1.0.0",
+          "CleanArch.Domain": "1.0.0",
+          "CleanArch.Infra.Bus": "1.0.0",
+          "CleanArch.Infra.Data": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection": "3.1.18"
+        },
+        "compile": {
+          "bin/placeholder/CleanArch.Infra.IoC.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CleanArch.Infra.IoC.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "MediatR/9.0.0": {
+      "sha512": "8b3UYNxegHVYcJMG2zH8wn+YqxLvXG+eMfj0cMCq/jTW72p6O3PCKMkrIv0mqyxdW7bA4gblsocw7n+/9Akg5g==",
+      "type": "package",
+      "path": "mediatr/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gradient_128x128.png",
+        "lib/net461/MediatR.dll",
+        "lib/net461/MediatR.xml",
+        "lib/netstandard2.0/MediatR.dll",
+        "lib/netstandard2.0/MediatR.xml",
+        "lib/netstandard2.1/MediatR.dll",
+        "lib/netstandard2.1/MediatR.xml",
+        "mediatr.9.0.0.nupkg.sha512",
+        "mediatr.nuspec"
+      ]
+    },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.18": {
       "sha512": "V5dzCPPhj2M7f7vhcHZfoYjMuZ2xCozv9yA613HEekovrguLNHJxyuhdqGywpe3r/HzwBLANjCHMT/DiMSAekw==",
       "type": "package",
@@ -5704,11 +5762,6 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "Clean.Arch.Infra.IoC/1.0.0": {
-      "type": "project",
-      "path": "../Clean.Arch.Infra.IoC/Clean.Arch.Infra.IoC.csproj",
-      "msbuildProject": "../Clean.Arch.Infra.IoC/Clean.Arch.Infra.IoC.csproj"
-    },
     "CleanArch.Application/1.0.0": {
       "type": "project",
       "path": "../CleanArch.Application/CleanArch.Application.csproj",
@@ -5719,16 +5772,30 @@
       "path": "../CleanArch.Domain/CleanArch.Domain.csproj",
       "msbuildProject": "../CleanArch.Domain/CleanArch.Domain.csproj"
     },
+    "CleanArch.Domain.Core/1.0.0": {
+      "type": "project",
+      "path": "../CleanArch.Domain.Core/CleanArch.Domain.Core.csproj",
+      "msbuildProject": "../CleanArch.Domain.Core/CleanArch.Domain.Core.csproj"
+    },
+    "CleanArch.Infra.Bus/1.0.0": {
+      "type": "project",
+      "path": "../CleanArch.Infra.Bus/CleanArch.Infra.Bus.csproj",
+      "msbuildProject": "../CleanArch.Infra.Bus/CleanArch.Infra.Bus.csproj"
+    },
     "CleanArch.Infra.Data/1.0.0": {
       "type": "project",
       "path": "../CleanArch.Infra.Data/CleanArch.Infra.Data.csproj",
       "msbuildProject": "../CleanArch.Infra.Data/CleanArch.Infra.Data.csproj"
+    },
+    "CleanArch.Infra.IoC/1.0.0": {
+      "type": "project",
+      "path": "../Clean.Arch.Infra.IoC/CleanArch.Infra.IoC.csproj",
+      "msbuildProject": "../Clean.Arch.Infra.IoC/CleanArch.Infra.IoC.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Clean.Arch.Infra.IoC >= 1.0.0",
-      "CleanArch.Infra.Data >= 1.0.0",
+      "CleanArch.Infra.IoC >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.1.18",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.18",
       "Microsoft.AspNetCore.Identity.UI >= 3.1.18",
@@ -5767,11 +5834,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Me\\.NET\\CleanArch\\Clean.Arch.Infra.IoC\\Clean.Arch.Infra.IoC.csproj": {
-              "projectPath": "C:\\Me\\.NET\\CleanArch\\Clean.Arch.Infra.IoC\\Clean.Arch.Infra.IoC.csproj"
-            },
-            "C:\\Me\\.NET\\CleanArch\\CleanArch.Infra.Data\\CleanArch.Infra.Data.csproj": {
-              "projectPath": "C:\\Me\\.NET\\CleanArch\\CleanArch.Infra.Data\\CleanArch.Infra.Data.csproj"
+            "C:\\Me\\.NET\\CleanArch\\Clean.Arch.Infra.IoC\\CleanArch.Infra.IoC.csproj": {
+              "projectPath": "C:\\Me\\.NET\\CleanArch\\Clean.Arch.Infra.IoC\\CleanArch.Infra.IoC.csproj"
             }
           }
         }

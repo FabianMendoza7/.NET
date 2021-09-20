@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "nfoyuHOwWRfJreSP4Ko0Xb/cfA1hn1HdIBF959dF/dGy/g/RXIbHzB1dz21i640rwa/UGbTINyV5iDLsnLQMeQ==",
+  "dgSpecHash": "c8GOz3bM9Kwl5RQKkj14TOi0wEvurhHrGWidaeop2bhf6OVMfOTGOdNgLv6clrlPrHjjTlxMn2BW0eKTQ1nKyA==",
   "success": true,
-  "projectFilePath": "C:\\Me\\.NET\\CleanArch\\Clean.Arch.Infra.IoC\\Clean.Arch.Infra.IoC.csproj",
+  "projectFilePath": "C:\\Me\\.NET\\CleanArch\\Clean.Arch.Infra.IoC\\CleanArch.Infra.IoC.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\idesi\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\idesi\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\idesi\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace CleanArch.Infra.Bus
 {
-    public sealed class InMemmoryBus: IMediatorHandler
+    public sealed class InMemoryBus: IMediatorHandler
     {
         private readonly IMediator _mediator;
 
-        public InMemmoryBus(IMediator mediator)
+        public InMemoryBus(IMediator mediator)
         {
             this._mediator = mediator;
         }

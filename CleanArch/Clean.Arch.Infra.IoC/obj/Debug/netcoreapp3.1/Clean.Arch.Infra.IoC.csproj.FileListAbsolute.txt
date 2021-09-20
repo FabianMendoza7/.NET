@@ -14,3 +14,7 @@ C:\Me\.NET\CleanArch\Clean.Arch.Infra.IoC\obj\Debug\netcoreapp3.1\Clean.Arch.Inf
 C:\Me\.NET\CleanArch\Clean.Arch.Infra.IoC\obj\Debug\netcoreapp3.1\Clean.Arch.Infra.IoC.csproj.CopyComplete
 C:\Me\.NET\CleanArch\Clean.Arch.Infra.IoC\obj\Debug\netcoreapp3.1\Clean.Arch.Infra.IoC.dll
 C:\Me\.NET\CleanArch\Clean.Arch.Infra.IoC\obj\Debug\netcoreapp3.1\Clean.Arch.Infra.IoC.pdb
+C:\Me\.NET\CleanArch\Clean.Arch.Infra.IoC\bin\Debug\netcoreapp3.1\CleanArch.Domain.Core.dll
+C:\Me\.NET\CleanArch\Clean.Arch.Infra.IoC\bin\Debug\netcoreapp3.1\CleanArch.Domain.Core.pdb
+C:\Me\.NET\CleanArch\Clean.Arch.Infra.IoC\bin\Debug\netcoreapp3.1\CleanArch.Infra.Bus.dll
+C:\Me\.NET\CleanArch\Clean.Arch.Infra.IoC\bin\Debug\netcoreapp3.1\CleanArch.Infra.Bus.pdb

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Za0ByNAxN7lgpgB8u7Ue9HZEsMsncoIaVt3p4n08iG/axppe+DCySjazYjBa9SOiNuwS3KJd3nRiHyNDfw1AfA==",
+  "dgSpecHash": "8/8vEFzH40c43t5cXrFhfObitV1/c7Xg+scfL3XGr0mz8bH0nR7545zYXCb7MHyks8GFrtOXETKKTpCv9SnGAw==",
   "success": true,
   "projectFilePath": "C:\\Me\\.NET\\CleanArch\\CleanArch.Mvc\\CleanArch.Mvc.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\idesi\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\idesi\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.18\\microsoft.aspnetcore.cryptography.internal.3.1.18.nupkg.sha512",
     "C:\\Users\\idesi\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.18\\microsoft.aspnetcore.cryptography.keyderivation.3.1.18.nupkg.sha512",
     "C:\\Users\\idesi\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\3.1.18\\microsoft.aspnetcore.diagnostics.entityframeworkcore.3.1.18.nupkg.sha512",
