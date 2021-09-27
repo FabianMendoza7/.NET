@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MediatR;
 
 namespace CleanArch.Mvc
 {
@@ -36,6 +37,8 @@ namespace CleanArch.Mvc
                 options.UseSqlServer(
                     Configuration.GetConnectionString("UniversityDBConnection"));
             });
+
+            services.AddMediatR(typeof(Startup));
 
             RegisterServices(services);
         }

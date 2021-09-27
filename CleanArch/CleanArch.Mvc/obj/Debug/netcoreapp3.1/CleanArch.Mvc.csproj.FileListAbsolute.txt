@@ -196,3 +196,4 @@ C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\CleanArch.Infra.Bus.d
 C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\CleanArch.Infra.Bus.pdb
 C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\CleanArch.Infra.IoC.dll
 C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\CleanArch.Infra.IoC.pdb
+C:\Me\.NET\CleanArch\CleanArch.Mvc\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
