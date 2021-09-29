@@ -1,10 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "jkSIIkYGIPAm6zX30zPIOI6UX7vVdojcd9ZlTZbQMhKyII1VKjJCN5ZylLVmxsL8AOLM6fOB3DBBUJbPXSqlJA==",
+  "dgSpecHash": "XEWTuDo2S0jplQ5ugNqTPytb4X62mLerQMGTALx7DBfI/RmzV4piFNAW7NB/apT8z1sXkO+p/zSnpNg5FZsDRw==",
   "success": true,
   "projectFilePath": "C:\\Me\\.NET\\CleanArch\\CleanArch.Application\\CleanArch.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\idesi\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
+    "C:\\Users\\idesi\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\idesi\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
+    "C:\\Users\\idesi\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\idesi\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\idesi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.0.0\\microsoft.extensions.dependencyinjection.abstractions.3.0.0.nupkg.sha512",
+    "C:\\Users\\idesi\\.nuget\\packages\\microsoft.extensions.options\\3.0.0\\microsoft.extensions.options.3.0.0.nupkg.sha512",
+    "C:\\Users\\idesi\\.nuget\\packages\\microsoft.extensions.primitives\\3.0.0\\microsoft.extensions.primitives.3.0.0.nupkg.sha512",
+    "C:\\Users\\idesi\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }
