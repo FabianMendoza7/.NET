@@ -22,8 +22,7 @@ namespace PeliculasAPI.Controllers
             this.mapper = mapper;
         }
 
-        protected async Task<List<TDTO>> Get<TEntidad, TDTO>() where TEntida
-           : class
+        protected async Task<List<TDTO>> Get<TEntidad, TDTO>() where TEntidad : class
         {
             var entidades = await context.Set<TEntidad>().AsNoTracking().ToListAsync();
             var dtos = mapper.Map<List<TDTO>>(entidades);
@@ -72,10 +71,10 @@ namespace PeliculasAPI.Controllers
             return NoContent();
         }
 
-        protected async Task<ActionResult> Patch<TEntidad, TDTO>(int id, JsonPatchDocument<TDTO> patchDocument) 
-            where TDTO : class 
-            where TEntidad: class, IId  
-{
+        protected async Task<ActionResult> Patch<TEntidad, TDTO>(int id, JsonPatchDocument<TDTO> patchDocument)
+            where TDTO : class
+            where TEntidad : class, IId
+        {
             if (patchDocument == null)
             {
                 // Error del cliente (mala solicitud)
