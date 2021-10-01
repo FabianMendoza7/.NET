@@ -72,3 +72,5 @@ C:\Me\.NET\PeliculasAPI\PeliculasAPI\obj\Debug\net6.0\PeliculasAPI.dll
 C:\Me\.NET\PeliculasAPI\PeliculasAPI\obj\Debug\net6.0\ref\PeliculasAPI.dll
 C:\Me\.NET\PeliculasAPI\PeliculasAPI\obj\Debug\net6.0\PeliculasAPI.pdb
 C:\Me\.NET\PeliculasAPI\PeliculasAPI\obj\Debug\net6.0\PeliculasAPI.genruntimeconfig.cache
+C:\Me\.NET\PeliculasAPI\PeliculasAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Me\.NET\PeliculasAPI\PeliculasAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

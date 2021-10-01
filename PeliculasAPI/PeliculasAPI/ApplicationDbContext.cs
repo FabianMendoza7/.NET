@@ -1,16 +1,16 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using NetTopologySuite;
 using NetTopologySuite.Geometries;
 using PeliculasAPI.Entidades;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Security.Claims;
 
 namespace PeliculasAPI
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext
     {
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
@@ -30,7 +30,6 @@ namespace PeliculasAPI
 
         private void SeedData(ModelBuilder modelBuilder)
         {
-            /*
             var rolAdminId = "9aae0b6d-d50c-4d0a-9b90-2a6873e3845d";
             var usuarioAdminId = "5673b8cf-12de-44f6-92ad-fae4a77932ad";
 
@@ -43,7 +42,7 @@ namespace PeliculasAPI
 
             var passwordHasher = new PasswordHasher<IdentityUser>();
 
-            var username = "felipe@hotmail.com";
+            var username = "fmendoza.ospina77@gmail.com";
 
             var usuarioAdmin = new IdentityUser()
             {
@@ -52,7 +51,7 @@ namespace PeliculasAPI
                 NormalizedUserName = username,
                 Email = username,
                 NormalizedEmail = username,
-                PasswordHash = passwordHasher.HashPassword(null, "Aa123456!")
+                PasswordHash = passwordHasher.HashPassword(null, "Femito$2021!")
             };
 
             //modelBuilder.Entity<IdentityUser>()
@@ -69,7 +68,7 @@ namespace PeliculasAPI
             //        UserId = usuarioAdminId,
             //        ClaimValue = "Admin"
             //    });
-            */
+
             var geometryFactory = NtsGeometryServices.Instance.CreateGeometryFactory(srid: 4326);
 
             modelBuilder.Entity<SalaDeCine>()
