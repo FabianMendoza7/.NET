@@ -6,8 +6,8 @@ using PeliculasAPI.DTOs;
 using PeliculasAPI.Entidades;
 using PeliculasAPI.Helpers;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
-using System.Xml.XPath;
 
 namespace PeliculasAPI.Controllers
 {
@@ -26,18 +26,24 @@ namespace PeliculasAPI.Controllers
         {
             var entidades = await context.Set<TEntidad>().AsNoTracking().ToListAsync();
             var dtos = mapper.Map<List<TDTO>>(entidades);
-
             return dtos;
         }
 
-        protected async Task<List<TDTO>> Get<TEntidad, TDTO>(PaginacionDTO paginacionDTO) where TEntidad : class
+        protected async Task<List<TDTO>> Get<TEntidad, TDTO>(PaginacionDTO paginacionDTO)
+            where TEntidad : class
         {
             var queryable = context.Set<TEntidad>().AsQueryable();
+            return await Get<TEntidad, TDTO>(paginacionDTO, queryable);
+        }
+
+        protected async Task<List<TDTO>> Get<TEntidad, TDTO>(PaginacionDTO paginacionDTO,
+            IQueryable<TEntidad> queryable)
+            where TEntidad : class
+        {
             await HttpContext.InsertarParametrosPaginacion(queryable, paginacionDTO.CantidadRegistrosPorPagina);
             var entidades = await queryable.Paginar(paginacionDTO).ToListAsync();
             return mapper.Map<List<TDTO>>(entidades);
         }
-
 
         protected async Task<ActionResult<TDTO>> Get<TEntidad, TDTO>(int id) where TEntidad : class, IId
         {
@@ -51,7 +57,8 @@ namespace PeliculasAPI.Controllers
             return mapper.Map<TDTO>(entidad);
         }
 
-        protected async Task<ActionResult> Post<TCreacion, TEntidad, TLectura>(TCreacion creacionDTO, string nombreRuta) where TEntidad : class, IId
+        protected async Task<ActionResult> Post<TCreacion, TEntidad, TLectura>
+            (TCreacion creacionDTO, string nombreRuta) where TEntidad : class, IId
         {
             var entidad = mapper.Map<TEntidad>(creacionDTO);
             context.Add(entidad);
@@ -61,11 +68,25 @@ namespace PeliculasAPI.Controllers
             return new CreatedAtRouteResult(nombreRuta, new { id = entidad.Id }, dtoLectura);
         }
 
-        protected async Task<ActionResult> Put<TCreacion, TEntidad>(int id, TCreacion creacionDTO) where TEntidad : class, IId
+        protected async Task<ActionResult> Put<TCreacion, TEntidad>
+            (int id, TCreacion creacionDTO) where TEntidad : class, IId
         {
             var entidad = mapper.Map<TEntidad>(creacionDTO);
             entidad.Id = id;
             context.Entry(entidad).State = EntityState.Modified;
+            await context.SaveChangesAsync();
+            return NoContent();
+        }
+
+        protected async Task<ActionResult> Delete<TEntidad>(int id) where TEntidad : class, IId, new()
+        {
+            var existe = await context.Set<TEntidad>().AnyAsync(x => x.Id == id);
+            if (!existe)
+            {
+                return NotFound();
+            }
+
+            context.Remove(new TEntidad() { Id = id });
             await context.SaveChangesAsync();
 
             return NoContent();
@@ -77,7 +98,6 @@ namespace PeliculasAPI.Controllers
         {
             if (patchDocument == null)
             {
-                // Error del cliente (mala solicitud)
                 return BadRequest();
             }
 
@@ -88,34 +108,19 @@ namespace PeliculasAPI.Controllers
                 return NotFound();
             }
 
-            var entidadDTO = mapper.Map<TDTO>(entidadDB);
+            var dto = mapper.Map<TDTO>(entidadDB);
 
-            patchDocument.ApplyTo(entidadDTO, ModelState);
+            patchDocument.ApplyTo(dto, ModelState);
 
-            var esValido = TryValidateModel(entidadDTO);
+            var isValid = TryValidateModel(dto);
 
-            if (!esValido)
+            if (!isValid)
             {
                 return BadRequest(ModelState);
             }
 
-            mapper.Map(entidadDTO, entidadDB);
+            mapper.Map(dto, entidadDB);
 
-            await context.SaveChangesAsync();
-
-            return NoContent();
-        }
-
-        protected async Task<ActionResult> Delete<TEntidad>(int id) where TEntidad : class, IId, new()
-        {
-            var existe = await context.Set<TEntidad>().AnyAsync(x => x.Id == id);
-
-            if (!existe)
-            {
-                return NotFound();
-            }
-
-            context.Remove(new TEntidad() { Id = id });
             await context.SaveChangesAsync();
 
             return NoContent();
