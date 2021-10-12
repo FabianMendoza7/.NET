@@ -156,3 +156,5 @@ C:\Me\.NET\PeliculasAPI\PeliculasAPI.Tests\obj\Debug\net6.0\PeliculasAPI.Tests.d
 C:\Me\.NET\PeliculasAPI\PeliculasAPI.Tests\obj\Debug\net6.0\ref\PeliculasAPI.Tests.dll
 C:\Me\.NET\PeliculasAPI\PeliculasAPI.Tests\obj\Debug\net6.0\PeliculasAPI.Tests.pdb
 C:\Me\.NET\PeliculasAPI\PeliculasAPI.Tests\obj\Debug\net6.0\PeliculasAPI.Tests.genruntimeconfig.cache
+C:\Me\.NET\PeliculasAPI\PeliculasAPI.Tests\bin\Debug\net6.0\Castle.Core.dll
+C:\Me\.NET\PeliculasAPI\PeliculasAPI.Tests\bin\Debug\net6.0\Moq.dll
