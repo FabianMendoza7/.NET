@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Me\\.NET\\CleanArch\\CleanArch.Infra.Bus\\CleanArch.Infra.Bus.csproj": {}
+    "E:\\.NET\\CleanArch\\CleanArch.Infra.Bus\\CleanArch.Infra.Bus.csproj": {}
   },
   "projects": {
-    "C:\\Me\\.NET\\CleanArch\\CleanArch.Domain.Core\\CleanArch.Domain.Core.csproj": {
+    "E:\\.NET\\CleanArch\\CleanArch.Domain.Core\\CleanArch.Domain.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Me\\.NET\\CleanArch\\CleanArch.Domain.Core\\CleanArch.Domain.Core.csproj",
+        "projectUniqueName": "E:\\.NET\\CleanArch\\CleanArch.Domain.Core\\CleanArch.Domain.Core.csproj",
         "projectName": "CleanArch.Domain.Core",
-        "projectPath": "C:\\Me\\.NET\\CleanArch\\CleanArch.Domain.Core\\CleanArch.Domain.Core.csproj",
-        "packagesPath": "C:\\Users\\idesi\\.nuget\\packages\\",
-        "outputPath": "C:\\Me\\.NET\\CleanArch\\CleanArch.Domain.Core\\obj\\",
+        "projectPath": "E:\\.NET\\CleanArch\\CleanArch.Domain.Core\\CleanArch.Domain.Core.csproj",
+        "packagesPath": "C:\\Users\\fmend\\.nuget\\packages\\",
+        "outputPath": "E:\\.NET\\CleanArch\\CleanArch.Domain.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\idesi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fmend\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,24 +64,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Me\\.NET\\CleanArch\\CleanArch.Infra.Bus\\CleanArch.Infra.Bus.csproj": {
+    "E:\\.NET\\CleanArch\\CleanArch.Infra.Bus\\CleanArch.Infra.Bus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Me\\.NET\\CleanArch\\CleanArch.Infra.Bus\\CleanArch.Infra.Bus.csproj",
+        "projectUniqueName": "E:\\.NET\\CleanArch\\CleanArch.Infra.Bus\\CleanArch.Infra.Bus.csproj",
         "projectName": "CleanArch.Infra.Bus",
-        "projectPath": "C:\\Me\\.NET\\CleanArch\\CleanArch.Infra.Bus\\CleanArch.Infra.Bus.csproj",
-        "packagesPath": "C:\\Users\\idesi\\.nuget\\packages\\",
-        "outputPath": "C:\\Me\\.NET\\CleanArch\\CleanArch.Infra.Bus\\obj\\",
+        "projectPath": "E:\\.NET\\CleanArch\\CleanArch.Infra.Bus\\CleanArch.Infra.Bus.csproj",
+        "packagesPath": "C:\\Users\\fmend\\.nuget\\packages\\",
+        "outputPath": "E:\\.NET\\CleanArch\\CleanArch.Infra.Bus\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\idesi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fmend\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -94,8 +96,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Me\\.NET\\CleanArch\\CleanArch.Domain.Core\\CleanArch.Domain.Core.csproj": {
-                "projectPath": "C:\\Me\\.NET\\CleanArch\\CleanArch.Domain.Core\\CleanArch.Domain.Core.csproj"
+              "E:\\.NET\\CleanArch\\CleanArch.Domain.Core\\CleanArch.Domain.Core.csproj": {
+                "projectPath": "E:\\.NET\\CleanArch\\CleanArch.Domain.Core\\CleanArch.Domain.Core.csproj"
               }
             }
           }
@@ -130,7 +132,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

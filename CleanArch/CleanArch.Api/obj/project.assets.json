@@ -6040,23 +6040,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\idesi\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\fmend\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Me\\.NET\\CleanArch\\CleanArch.Api\\CleanArch.Api.csproj",
+      "projectUniqueName": "E:\\.NET\\CleanArch\\CleanArch.Api\\CleanArch.Api.csproj",
       "projectName": "CleanArch.Api",
-      "projectPath": "C:\\Me\\.NET\\CleanArch\\CleanArch.Api\\CleanArch.Api.csproj",
-      "packagesPath": "C:\\Users\\idesi\\.nuget\\packages\\",
-      "outputPath": "C:\\Me\\.NET\\CleanArch\\CleanArch.Api\\obj\\",
+      "projectPath": "E:\\.NET\\CleanArch\\CleanArch.Api\\CleanArch.Api.csproj",
+      "packagesPath": "C:\\Users\\fmend\\.nuget\\packages\\",
+      "outputPath": "E:\\.NET\\CleanArch\\CleanArch.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\idesi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fmend\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6070,8 +6071,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Me\\.NET\\CleanArch\\Clean.Arch.Infra.IoC\\CleanArch.Infra.IoC.csproj": {
-              "projectPath": "C:\\Me\\.NET\\CleanArch\\Clean.Arch.Infra.IoC\\CleanArch.Infra.IoC.csproj"
+            "E:\\.NET\\CleanArch\\Clean.Arch.Infra.IoC\\CleanArch.Infra.IoC.csproj": {
+              "projectPath": "E:\\.NET\\CleanArch\\Clean.Arch.Infra.IoC\\CleanArch.Infra.IoC.csproj"
             }
           }
         }
@@ -6117,12 +6118,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.13, 3.1.13]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -6131,7 +6126,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

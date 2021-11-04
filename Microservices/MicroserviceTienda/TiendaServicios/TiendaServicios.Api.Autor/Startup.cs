@@ -1,15 +1,13 @@
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using TiendaServicios.Api.Autor.Aplicacion;
+using TiendaServicios.Api.Autor.Persistencia;
 
 namespace TiendaServicios.Api.Autor
 {
@@ -31,6 +29,13 @@ namespace TiendaServicios.Api.Autor
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TiendaServicios.Api.Autor", Version = "v1" });
             });
+
+            services.AddDbContext<ContextoAutor>(options =>
+            {
+                options.UseNpgsql(Configuration.GetConnectionString("ConexionDatabase"));
+            });
+
+            services.AddMediatR(typeof(Nuevo.Manejador).Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
