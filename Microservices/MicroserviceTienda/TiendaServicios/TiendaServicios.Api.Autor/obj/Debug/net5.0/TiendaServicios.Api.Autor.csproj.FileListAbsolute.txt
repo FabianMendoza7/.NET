@@ -66,4 +66,8 @@ E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Aut
 E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Autor\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Autor\bin\Debug\net5.0\MediatR.dll
 E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Autor\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
-E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Autor\obj\Debug\net5.0\TiendaServicios.Api.Autor.csproj.CopyComplete
+E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Autor\bin\Debug\net5.0\FluentValidation.dll
+E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Autor\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Autor\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
+E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Autor\bin\Debug\net5.0\AutoMapper.dll
+E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Autor\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
