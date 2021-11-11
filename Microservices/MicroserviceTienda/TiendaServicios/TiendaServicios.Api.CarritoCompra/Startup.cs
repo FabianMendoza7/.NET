@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -10,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TiendaServicios.Api.CarritoCompra.Persistencia;
 
 namespace TiendaServicios.Api.CarritoCompra
 {
@@ -27,6 +29,12 @@ namespace TiendaServicios.Api.CarritoCompra
         {
 
             services.AddControllers();
+
+            services.AddDbContext<CarritoContexto>(opt =>
+            {
+                opt.UseMySQL(Configuration.GetConnectionString("ConexionDB"));
+            });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TiendaServicios.Api.CarritoCompra", Version = "v1" });
