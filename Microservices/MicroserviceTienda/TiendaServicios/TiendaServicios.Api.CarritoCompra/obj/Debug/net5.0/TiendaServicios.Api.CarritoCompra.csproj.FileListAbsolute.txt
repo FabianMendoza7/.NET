@@ -54,3 +54,4 @@ E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Car
 E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.CarritoCompra\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
 E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.CarritoCompra\bin\Debug\net5.0\Microsoft.Bcl.HashCode.dll
 E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.CarritoCompra\obj\Debug\net5.0\TiendaServicios.Api.CarritoCompra.csproj.AssemblyReference.cache
+E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.CarritoCompra\obj\Debug\net5.0\TiendaServicios.Api.CarritoCompra.csproj.CopyComplete
