@@ -40,7 +40,6 @@ E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Aut
 E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Autor\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Autor\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Autor\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Autor\obj\Debug\net5.0\TiendaServicios.Api.Autor.csproj.AssemblyReference.cache
 E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Autor\obj\Debug\net5.0\TiendaServicios.Api.Autor.GeneratedMSBuildEditorConfig.editorconfig
 E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Autor\obj\Debug\net5.0\TiendaServicios.Api.Autor.AssemblyInfoInputs.cache
 E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Autor\obj\Debug\net5.0\TiendaServicios.Api.Autor.AssemblyInfo.cs
@@ -71,3 +70,4 @@ E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Aut
 E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Autor\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
 E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Autor\bin\Debug\net5.0\AutoMapper.dll
 E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Autor\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Autor\obj\Debug\net5.0\TiendaServicios.Api.Autor.csproj.CopyComplete

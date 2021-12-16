@@ -51,16 +51,29 @@ namespace TiendaServicios.Api.Libro.Tests
         }
 
         [Fact]
-        public void GetLibros()
+        public async void GetLibros()
         {
+            System.Diagnostics.Debugger.Launch();
+
             //1. Emular la instancia de entity framework (ContextoLibreria).
             var mockContexto = new Mock<ContextoLibreria>();
 
             //2. Emular al mapping IMapper.
-            var mockMapper = new Mock<IMapper>();
+            var mapConfig = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile(new MappingTest());
+            });
+
+            var mapper = mapConfig.CreateMapper();
 
             //3. Instanciar la clase manejador y pasarle como parámetros los mocks que he creado.
-            Consulta.Manejador manejador = new Consulta.Manejador(mockContexto.Object, mockMapper.Object);
+            Consulta.Manejador manejador = new Consulta.Manejador(mockContexto.Object, mapper);
+
+            Consulta.ListaLibros request = new Consulta.ListaLibros();
+
+            var lista = await manejador.Handle(request, new System.Threading.CancellationToken());
+
+            Assert.True(lista.Any());
         }
     }
 }

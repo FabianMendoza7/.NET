@@ -64,4 +64,4 @@ E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Lib
 E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Libro\obj\Debug\net5.0\TiendaServicios.Api.Libro.genruntimeconfig.cache
 E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Libro\bin\Debug\net5.0\ref\TiendaServicios.Api.Libro.dll
 E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Libro\obj\Debug\net5.0\staticwebassets\TiendaServicios.Api.Libro.StaticWebAssets.xml
-E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Libro\obj\Debug\net5.0\TiendaServicios.Api.Libro.csproj.AssemblyReference.cache
+E:\.NET\Microservices\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Libro\obj\Debug\net5.0\TiendaServicios.Api.Libro.csproj.CopyComplete

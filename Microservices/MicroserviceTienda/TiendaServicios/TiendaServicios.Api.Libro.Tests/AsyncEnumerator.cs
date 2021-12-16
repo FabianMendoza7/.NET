@@ -11,7 +11,7 @@ namespace TiendaServicios.Api.Libro.Tests
         private readonly IEnumerator<T> enumerator;
         public T Current => enumerator.Current;
 
-        public AsyncEnumerator(IEnumerator<T> enumerator) => this.enumerator = enumerator ?? throw new ArgumentNullException;
+        public AsyncEnumerator(IEnumerator<T> enumerator) => this.enumerator = enumerator ?? throw new ArgumentNullException();
 
         public async ValueTask DisposeAsync()
         {

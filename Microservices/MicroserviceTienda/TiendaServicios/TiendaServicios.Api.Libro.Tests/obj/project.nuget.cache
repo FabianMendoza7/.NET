@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oOaUfI7kHme5MqwJ3kHAwnTSfdvy7luAPFmh26E4KkrmPi4Gkc1Y/cNOgO6now+Ga1GHbE+0glgfnBx66ja2VA==",
+  "dgSpecHash": "Dz9mUpAbv7f0MLyc0uSMNUeTemdmSsNfxuvOTKuEM0qiB7U7bH8uKyFc/8CYdQsMz+KTmKlOI8J2OOvr4MEWDg==",
   "success": true,
   "projectFilePath": "E:\\.NET\\Microservices\\MicroserviceTienda\\TiendaServicios\\TiendaServicios.Api.Libro.Tests\\TiendaServicios.Api.Libro.Tests.csproj",
   "expectedPackageFiles": [
