@@ -9,22 +9,23 @@ namespace CleanArch.Domain.CommandHandlers
 {
     public class CourseCommandHandler : IRequestHandler<CreateCourseCommand, bool>
     {
-        private readonly ICourseRepository _courseRepository;
+        private readonly ICourseRepository courseRepository;
 
         public CourseCommandHandler(ICourseRepository courseRepository)
         {
-            this._courseRepository = courseRepository;
+            this.courseRepository = courseRepository;
         }
+
         public Task<bool> Handle(CreateCourseCommand request, CancellationToken cancellationToken)
         {
-            var course = new Course()
+            var course = new Course
             {
-                Name = request.Name,
                 Description = request.Description,
-                ImageUrl = request.ImageUrl
+                ImageUrl = request.ImageUrl,
+                Name = request.Name
             };
 
-            _courseRepository.Add(course);
+            courseRepository.Add(course);
 
             return Task.FromResult(true);
         }

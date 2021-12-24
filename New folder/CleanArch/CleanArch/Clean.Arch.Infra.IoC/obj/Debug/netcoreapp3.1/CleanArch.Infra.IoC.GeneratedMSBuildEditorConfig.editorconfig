@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = CleanArch.Infra.IoC
+build_property.ProjectDir = E:\.NET\New folder\CleanArch\CleanArch\Clean.Arch.Infra.IoC\

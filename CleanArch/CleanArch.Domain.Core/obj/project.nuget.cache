@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GudSIjH0OIvTBA/dhyJME96Y0EtjeJ6njOpxRpGZYMpk86LmBl2aYxa3LqNIStkzUuCfpM9+z1xL/wGqCykf3Q==",
+  "dgSpecHash": "Ci384aDTkSw/sUsB5DdCvOXRYnxRCPfKdrDtMmNH8PZTZHBi7MsVR0m/Mjugyr2jajZtBKJWx7+7VU9YvT7vBg==",
   "success": true,
   "projectFilePath": "E:\\.NET\\CleanArch\\CleanArch.Domain.Core\\CleanArch.Domain.Core.csproj",
   "expectedPackageFiles": [

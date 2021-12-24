@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CleanArch.Domain.Commands
+﻿namespace CleanArch.Domain.Commands
 {
     public class CreateCourseCommand : CourseCommand
     {
-        public CreateCourseCommand(string name, string description, string imageUrl)
+        public CreateCourseCommand(string name, string desc, string imageUrl)
         {
             Name = name;
-            Description = description;
+            Description = desc;
             ImageUrl = imageUrl;
         }
     }

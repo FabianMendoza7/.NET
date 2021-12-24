@@ -5,27 +5,26 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace CleanArch.Api.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class CourseController : ControllerBase
     {
-        private readonly ICourseService _courseService;
+        private readonly ICourseService courseService;
 
         public CourseController(ICourseService courseService)
         {
-            this._courseService = courseService;
+            this.courseService = courseService;
         }
 
         [HttpPost]
         public IActionResult Post([FromBody] CourseViewModel courseViewModel)
         {
-            _courseService.Create(courseViewModel);
+            courseService.Create(courseViewModel);
 
-            return Ok(courseViewModel);
+            return Ok();
         }
     }
 }

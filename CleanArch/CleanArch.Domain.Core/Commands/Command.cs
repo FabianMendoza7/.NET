@@ -3,13 +3,15 @@ using System;
 
 namespace CleanArch.Domain.Core.Commands
 {
-    public abstract class Command: Message
+    public abstract class Command : Message
     {
-        public DateTime Timestamp { get; protected set; }
+        public DateTime TimeStamp { get; protected set; }
 
-        public Command()
+        protected Command()
         {
-            Timestamp = DateTime.Now;
+            TimeStamp = DateTime.Now;
         }
+
+        
     }
 }

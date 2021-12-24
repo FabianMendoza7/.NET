@@ -1,5 +1,6 @@
+using CleanArch.Api.Configurations;
 using CleanArch.Infra.Data.Context;
-using CleanArch.Infra.IoC;
+using CleanArch.Infra.Ioc;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -7,7 +8,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
 
 namespace CleanArch.Api
 {
@@ -23,22 +23,24 @@ namespace CleanArch.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<UniversityDBContext>(options =>
-            {
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("UniversityDBConnection"));
-            });
-
-            services.AddControllers();
-
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "University Api", Version = "v1" });
-            });
+            DependencyContainer.RegisterServices(services);
 
             services.AddMediatR(typeof(Startup));
 
-            RegisterServices(services);
+            services.RegisterAutoMapper();
+
+            services.AddSwaggerGen(x => x.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+            {
+                Title = "Course Api",
+                Version = "v1"
+            }));
+
+            services.AddDbContext<MainDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+            });
+
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,28 +51,19 @@ namespace CleanArch.Api
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSwagger();
-
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "University Api V1");
-            });
-
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthorization();
 
+            app.UseSwagger();
+            app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "Course Api"); });
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
-        }
-
-        private static void RegisterServices(IServiceCollection services)
-        {
-            DependencyContainer.RegisterService(services);
         }
     }
 }

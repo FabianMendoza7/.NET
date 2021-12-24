@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5wynT+trZJ5yQ5vx70MrNdQneCLfy4g+GfKJhpihFMPvGpVmZIQt8qUenBlUzojW7aQKeALCPZ8CvHtO538dtg==",
+  "dgSpecHash": "a2Apctron7JmFJeehAiin8uHaDyvb4pPbaorB1ZVKQ9Wzu2tPqjPwUb9YVu1BG7n41DX7AxDr7tNSxIFZ3rqCA==",
   "success": true,
   "projectFilePath": "E:\\.NET\\CleanArch\\CleanArch.Infra.Bus\\CleanArch.Infra.Bus.csproj",
   "expectedPackageFiles": [

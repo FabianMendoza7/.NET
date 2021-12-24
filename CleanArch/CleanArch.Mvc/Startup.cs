@@ -1,6 +1,8 @@
-using CleanArch.Infra.IoC;
 using CleanArch.Infra.Data.Context;
+using CleanArch.Infra.Ioc;
+using CleanArch.Mvc.Configurations;
 using CleanArch.Mvc.Data;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -8,7 +10,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MediatR;
 
 namespace CleanArch.Mvc
 {
@@ -26,21 +27,23 @@ namespace CleanArch.Mvc
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("UniversityIdentityDBConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddControllersWithViews();
-            services.AddRazorPages();
+                    Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDatabaseDeveloperPageExceptionFilter();
 
-            services.AddDbContext<UniversityDBContext>(options =>
-            {
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("UniversityDBConnection"));
-            });
+            services.RegisterAutoMapper();
+
+            DependencyContainer.RegisterServices(services);
 
             services.AddMediatR(typeof(Startup));
 
-            RegisterServices(services);
+            services.AddDbContext<MainDbContext>(options=>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+            });
+
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,7 +52,7 @@ namespace CleanArch.Mvc
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
+                app.UseMigrationsEndPoint();
             }
             else
             {
@@ -72,11 +75,6 @@ namespace CleanArch.Mvc
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
-        }
-
-        private static void RegisterServices(IServiceCollection services)
-        {
-            DependencyContainer.RegisterService(services);
         }
     }
 }

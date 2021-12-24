@@ -1,0 +1,15 @@
+E:\.NET\CleanArch\CleanArch.Infra.Bus\bin\Debug\net5.0\CleanArch.Infra.Bus.deps.json
+E:\.NET\CleanArch\CleanArch.Infra.Bus\bin\Debug\net5.0\CleanArch.Infra.Bus.dll
+E:\.NET\CleanArch\CleanArch.Infra.Bus\bin\Debug\net5.0\ref\CleanArch.Infra.Bus.dll
+E:\.NET\CleanArch\CleanArch.Infra.Bus\bin\Debug\net5.0\CleanArch.Infra.Bus.pdb
+E:\.NET\CleanArch\CleanArch.Infra.Bus\bin\Debug\net5.0\CleanArch.Domain.Core.dll
+E:\.NET\CleanArch\CleanArch.Infra.Bus\bin\Debug\net5.0\CleanArch.Domain.Core.pdb
+E:\.NET\CleanArch\CleanArch.Infra.Bus\obj\Debug\net5.0\CleanArch.Infra.Bus.csproj.AssemblyReference.cache
+E:\.NET\CleanArch\CleanArch.Infra.Bus\obj\Debug\net5.0\CleanArch.Infra.Bus.GeneratedMSBuildEditorConfig.editorconfig
+E:\.NET\CleanArch\CleanArch.Infra.Bus\obj\Debug\net5.0\CleanArch.Infra.Bus.AssemblyInfoInputs.cache
+E:\.NET\CleanArch\CleanArch.Infra.Bus\obj\Debug\net5.0\CleanArch.Infra.Bus.AssemblyInfo.cs
+E:\.NET\CleanArch\CleanArch.Infra.Bus\obj\Debug\net5.0\CleanArch.Infra.Bus.csproj.CoreCompileInputs.cache
+E:\.NET\CleanArch\CleanArch.Infra.Bus\obj\Debug\net5.0\CleanArch.Infra.Bus.csproj.CopyComplete
+E:\.NET\CleanArch\CleanArch.Infra.Bus\obj\Debug\net5.0\CleanArch.Infra.Bus.dll
+E:\.NET\CleanArch\CleanArch.Infra.Bus\obj\Debug\net5.0\ref\CleanArch.Infra.Bus.dll
+E:\.NET\CleanArch\CleanArch.Infra.Bus\obj\Debug\net5.0\CleanArch.Infra.Bus.pdb

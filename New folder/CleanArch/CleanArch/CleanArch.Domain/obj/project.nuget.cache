@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "bYaKzHHgzfhz1+/c6Y4LFa7tyj8TZrfPBMKbqHvY6jxcxjeD0dAP0ja9m6tA8d5lsir6XLthHcrEREln+TOEcg==",
+  "success": true,
+  "projectFilePath": "E:\\.NET\\New folder\\CleanArch\\CleanArch\\CleanArch.Domain\\CleanArch.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fmend\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

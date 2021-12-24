@@ -1,28 +1,28 @@
 ﻿using CleanArch.Domain.Interfaces;
 using CleanArch.Domain.Models;
 using CleanArch.Infra.Data.Context;
-using System.Collections.Generic;
+using System.Linq;
 
 namespace CleanArch.Infra.Data.Repository
 {
     public class CourseRepository : ICourseRepository
     {
-        private readonly UniversityDBContext _ctx;
+        private readonly MainDbContext context;
 
-        public CourseRepository(UniversityDBContext ctx)
+        public CourseRepository(MainDbContext context)
         {
-            this._ctx = ctx;
+            this.context = context;
         }
 
         public void Add(Course course)
         {
-            _ctx.Courses.Add(course);
-            _ctx.SaveChanges();
+            context.Courses.Add(course);
+            context.SaveChanges();
         }
 
-        public IEnumerable<Course> GetCourses()
+        public IQueryable<Course> GetCourses()
         {
-            return _ctx.Courses;
+            return context.Courses;
         }
     }
 }

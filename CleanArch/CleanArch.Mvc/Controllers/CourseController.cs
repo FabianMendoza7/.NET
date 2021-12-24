@@ -1,28 +1,24 @@
 ﻿using CleanArch.Application.Interfaces;
-using CleanArch.Application.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CleanArch.Mvc.Controllers
 {
     [Authorize]
     public class CourseController : Controller
     {
-        private readonly ICourseService _courseService;
+        private readonly ICourseService courseService;
 
         public CourseController(ICourseService courseService)
         {
-            this._courseService = courseService;
+            this.courseService = courseService;
         }
 
         public IActionResult Index()
         {
-            CourseViewModel model = _courseService.GetCourses();
-            return View(model);
+            var data = courseService.GetCourses();
+
+            return View(data);
         }
     }
 }
